@@ -1,0 +1,1 @@
+Various code from projects including Globalzona.com
