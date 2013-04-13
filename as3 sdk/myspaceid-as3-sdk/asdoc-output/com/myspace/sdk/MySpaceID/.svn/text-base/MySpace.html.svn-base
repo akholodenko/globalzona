@@ -1,0 +1,1853 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="MySpace,com.myspace.sdk.MySpaceID.MySpace,addAlbum,addPhoto,clearAppData,clearGlobalAppData,getAccessToken,getActivitiesAtom,getAlbum,getAlbumInfo,getAlbumPhoto,getAlbums,getAppData,getAuthorizationURL,getComments,getDateFormat,getFriends,getFriendsActivitiesAtom,getFriendsList,getFriendsStatus,getFriendship,getGlobalAppData,getIndicators,getMediaItemMetadata,getMood,getMoods,getPhoto,getPhotos,getPreferences,getProfile,getRequestToken,getStatus,getTimeZone,getUser,getUserFriendsAppData,getUserId,getVideo,getVideos,onIOError,postMood,postStatus,putAppData,putGlobalAppData,setDateFormatTimeZone,setMood,setStatus" name="keywords">
+<title>com.myspace.sdk.MySpaceID.MySpace</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'MySpace - MySpaceID AS3 SDK';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">MySpaceID AS3 SDK</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/myspace/sdk/MySpaceID/MySpace.html&amp;com/myspace/sdk/MySpaceID/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;MySpace</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class MySpace"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.myspace.sdk.MySpaceID</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class MySpace</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">MySpace <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> flash.display.Sprite</td>
+</tr>
+</table>
+<p></p>
+  The MySpace class provides a set of APIs to get and set various user data.
+  
+  GET APIs require a "responseCallback" function, written by the user to be called upon
+  successful retrieval of data. Expected input parameters for the user-written callback
+  functions are stated in the description of each API.  
+  
+  Certain APIs are not accesible without special access privileges given to the application
+  
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#MySpace()">MySpace</a>(consumerKey:String, consumerSecret:String, isApplicationOffSite:Boolean = false, accessTokenKey:String = null, accessTokenSecret:String = null)</div>
+<div class="summaryTableDescription">
+   Constructor Class
+   
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addAlbum()">addAlbum</a>(userId:String, caption:String, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Returns the albumID (string) and the raw JSON response
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addPhoto()">addPhoto</a>(userId:String, albumId:String, caption:String, imageData:ByteArray, contentType:String, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Returns the statusLink [raw response] (string) and the imageMetadataUrl (string)
+   http://mywiki.corp.myspace.com/index.php/OpenSocial0.9MediaItems
+   
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clearAppData()">clearAppData</a>(userId:String, keys:String):void</div>
+<div class="summaryTableDescription">
+   Clears the app data for given keys
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clearGlobalAppData()">clearGlobalAppData</a>(keys:String):void</div>
+<div class="summaryTableDescription">
+   Clears the global app data for given keys
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAccessToken()">getAccessToken</a>(requestToken:<a href="../oAuth/OAuthToken.html">OAuthToken</a>, responseCallback:Function, oAuthVerifier:String = ""):void</div>
+<div class="summaryTableDescription">
+   Returns (STRING) the access token (this function is the 3rd step for OFF SITE app authentication)
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getActivitiesAtom()">getActivitiesAtom</a>(userId:String, responseCallback:Function, culture:String = null, lastRetrievalTimeStamp:String = null, activityTypes:String = null, extensions:String = null, composite:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) activity stream of the user 
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAlbum()">getAlbum</a>(userId:String, albumId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) an album of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAlbumInfo()">getAlbumInfo</a>(userId:String, albumId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) an album's info of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAlbumPhoto()">getAlbumPhoto</a>(userId:String, albumId:String, photoId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) a photo in an album of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAlbums()">getAlbums</a>(userId:String, responseCallback:Function = null, page:int = -1, pageSize:int = -1):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the albums of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAppData()">getAppData</a>(userId:String, responseCallback:Function, keys:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the app data for a given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAuthorizationURL()">getAuthorizationURL</a>(requestToken:<a href="../oAuth/OAuthToken.html">OAuthToken</a>):String</div>
+<div class="summaryTableDescription">
+   Returns (STRING) the authorization URL (this function is the 2nd step for OFF SITE app authentication)
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getComments()">getComments</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the comments for a given user (API RESTRICTED TO APPLICATIONS WITH PERMISSIONS TO ACCESS THIS INFORMATION)
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getDateFormat()">getDateFormat</a>():String</div>
+<div class="summaryTableDescription">
+   Returns the date format being used by the API
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriends()">getFriends</a>(userId:String, responseCallback:Function, page:int = -1, pageSize:int = -1, list:String = null, show:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the friends of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriendsActivitiesAtom()">getFriendsActivitiesAtom</a>(userId:String, responseCallback:Function, culture:String = null, lastRetrievalTimeStamp:String = null, activityTypes:String = null, extensions:String = null, composite:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) activity stream of the user's friends 
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriendship()">getFriendship</a>(userId:String, friendsIds:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the friendship of the given user with other users
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriendsList()">getFriendsList</a>(userId:String, responseCallback:Function, friendsIds:String, show:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the specified friends of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriendsStatus()">getFriendsStatus</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the status of the given user's friends
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getGlobalAppData()">getGlobalAppData</a>(responseCallback:Function, keys:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the global app data for a given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getIndicators()">getIndicators</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the indicators for a given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMediaItemMetadata()">getMediaItemMetadata</a>(mediaItemUrl:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns the data (XML) about the image
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMood()">getMood</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the mood of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMoods()">getMoods</a>(userId:String, responseCallback:Function, culture:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the moods available for the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPhoto()">getPhoto</a>(userId:String, photoId:String, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the photo for the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPhotos()">getPhotos</a>(userId:String, responseCallback:Function, page:int = -1, pageSize:int = -1):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the photos for the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPreferences()">getPreferences</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the preferences for a given user (API RESTRICTED TO APPLICATIONS WITH PERMISSIONS TO ACCESS THIS INFORMATION)
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getProfile()">getProfile</a>(userId:String, responseCallback:Function = null, detailType:String = "full"):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the profile for the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRequestToken()">getRequestToken</a>(responseCallback:Function, callbackURL:String = ""):void</div>
+<div class="summaryTableDescription">
+   Returns (STRING) the request token (this function is the 1st step for OFF SITE app authorization)
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getStatus()">getStatus</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the status for the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getTimeZone()">getTimeZone</a>():int</div>
+<div class="summaryTableDescription">
+   Returns the time zone being used by the API
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUser()">getUser</a>(responseCallback:Function, onCompleteFunction:Function = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the current user object
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUserFriendsAppData()">getUserFriendsAppData</a>(userId:String, responseCallback:Function, keys:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) user's friends' app data
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUserId()">getUserId</a>(responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (STRING) the current user's ID
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getVideo()">getVideo</a>(userId:String, videoId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the video of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getVideos()">getVideos</a>(userId:String, responseCallback:Function):void</div>
+<div class="summaryTableDescription">
+   Returns (XML) the videos of the given user
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onIOError()">onIOError</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+   Basic callback function called on failure of any urlLoader request
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#postMood()">postMood</a>(userId:String, mood:int, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Sets user's mood
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#postStatus()">postStatus</a>(userId:String, status:String, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Sets user's status
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#putAppData()">putAppData</a>(userId:String, appParams:Object, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Sets the app data using key/value pairs
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#putGlobalAppData()">putGlobalAppData</a>(appParams:Object, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Sets the global app data using key/value pairs
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setDateFormatTimeZone()">setDateFormatTimeZone</a>(dateFormat:String, timeZone:int):void</div>
+<div class="summaryTableDescription">
+   Sets the date format and time zone format for the response times
+   See the developer wiki for more details - http://developerwiki.myspace.com/index.php?title=Date%2C_Time_and_Timezone_Formats
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setMood()">setMood</a>(userId:String, mood:int, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Wrapper for postMood() 
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setStatus()">setStatus</a>(userId:String, status:String, responseCallback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Wrapper for postStatus() 
+   </div>
+</td><td class="summaryTableOwnerCol">MySpace</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="MySpace()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MySpace</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function MySpace(consumerKey:String, consumerSecret:String, isApplicationOffSite:Boolean = false, accessTokenKey:String = null, accessTokenSecret:String = null)</code><p>
+   Constructor Class
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">consumerKey</span>:String</code> &mdash; key assigned to the developer's application
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">consumerSecret</span>:String</code> &mdash; secret generated for the developer's application
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">isApplicationOffSite</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; (!) flag to be set if developer's application is OFF SITE
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accessTokenKey</span>:String</code> (default = <code>null</code>)<code></code> &mdash; (!) key retrieved by the process of OFF SITE authorization and the final step using getAccessToken()
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accessTokenSecret</span>:String</code> (default = <code>null</code>)<code></code> &mdash; (!) secret retrieved by the process of OFF SITE authorization and the final step using getAccessToken()
+   
+   (!) - items requred for OFF SITE application development and usage
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addAlbum()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addAlbum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addAlbum(userId:String, caption:String, responseCallback:Function = null):void</code><p>
+   Returns the albumID (string) and the raw JSON response
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's albums to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">caption</span>:String</code> &mdash; string used as the title of the album
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="addPhoto()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addPhoto</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addPhoto(userId:String, albumId:String, caption:String, imageData:ByteArray, contentType:String, responseCallback:Function = null):void</code><p>
+   Returns the statusLink [raw response] (string) and the imageMetadataUrl (string)
+   http://mywiki.corp.myspace.com/index.php/OpenSocial0.9MediaItems
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's albums to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">albumId</span>:String</code> &mdash; ID of album to which the photo is being added to
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">caption</span>:String</code> &mdash; string used as the title of the album
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">imageData</span>:ByteArray</code> &mdash; ByteArray (data) of image being uploaded
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">contentType</span>:String</code> &mdash; type of image being uploaded (example: image/jpeg)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="clearAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clearAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clearAppData(userId:String, keys:String):void</code><p>
+   Clears the app data for given keys
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's app data to clear
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keys</span>:String</code> &mdash; keys of data to be cleared, separated by semicolons
+   </td>
+</tr>
+</table>
+</div>
+<a name="clearGlobalAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clearGlobalAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clearGlobalAppData(keys:String):void</code><p>
+   Clears the global app data for given keys
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">keys</span>:String</code> &mdash; keys of data to be cleared, separated by semicolons
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAccessToken()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAccessToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAccessToken(requestToken:<a href="../oAuth/OAuthToken.html">OAuthToken</a>, responseCallback:Function, oAuthVerifier:String = ""):void</code><p>
+   Returns (STRING) the access token (this function is the 3rd step for OFF SITE app authentication)
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">requestToken</span>:<a href="../oAuth/OAuthToken.html">OAuthToken</a></code> &mdash; token returned by calling getRequestToken()
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   
+   NOTE: new request token returns &oauth_callback_confirmed=true appended to the key/secret query string; 
+   this portion needs to be removed before passing in the string to create the request token OAuthToken object   
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oAuthVerifier</span>:String</code> (default = "<code></code>")<code></code></td>
+</tr>
+</table>
+</div>
+<a name="getActivitiesAtom()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getActivitiesAtom</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getActivitiesAtom(userId:String, responseCallback:Function, culture:String = null, lastRetrievalTimeStamp:String = null, activityTypes:String = null, extensions:String = null, composite:Boolean = false):void</code><p>
+   Returns (XML) activity stream of the user 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID of user who's activities are being pulled
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">culture</span>:String</code> (default = <code>null</code>)<code></code> &mdash; NOT USED YET
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">lastRetrievalTimeStamp</span>:String</code> (default = <code>null</code>)<code></code> &mdash; NOT USED YET
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">activityTypes</span>:String</code> (default = <code>null</code>)<code></code> &mdash; takes in piped (|) activity type parameters to filter result data; http://developerwiki.myspace.com/index.php?title=ActivityStream_Queries
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">extensions</span>:String</code> (default = <code>null</code>)<code></code> &mdash; takes in piped (|) extension parameters to organize result data; http://developerwiki.myspace.com/index.php?title=ActivityStream_Queries
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">composite</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Whether or not to return the stream as composite entries; http://developerwiki.myspace.com/index.php?title=ActivityStream_Queries
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAlbum()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAlbum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAlbum(userId:String, albumId:String, responseCallback:Function):void</code><p>
+   Returns (XML) an album of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's albums to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">albumId</span>:String</code> &mdash; ID of album, information of which to return
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAlbumInfo()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAlbumInfo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAlbumInfo(userId:String, albumId:String, responseCallback:Function):void</code><p>
+   Returns (XML) an album's info of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's albums info to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">albumId</span>:String</code> &mdash; ID of album, information of which to return
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAlbumPhoto()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAlbumPhoto</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAlbumPhoto(userId:String, albumId:String, photoId:String, responseCallback:Function):void</code><p>
+   Returns (XML) a photo in an album of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's album's photo to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">albumId</span>:String</code> &mdash; ID of album, which contains the desired photo
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">photoId</span>:String</code> &mdash; ID of photo, information of which to return
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAlbums()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAlbums</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAlbums(userId:String, responseCallback:Function = null, page:int = -1, pageSize:int = -1):void</code><p>
+   Returns (XML) the albums of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's albums to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; specifies which page
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pageSize</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; specifies number of items per page
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAppData(userId:String, responseCallback:Function, keys:String = null):void</code><p>
+   Returns (XML) the app data for a given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's app data to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keys</span>:String</code> (default = <code>null</code>)<code></code> &mdash; keys for data to be retrieved, separated by semicolons
+   </td>
+</tr>
+</table>
+</div>
+<a name="getAuthorizationURL()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAuthorizationURL</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAuthorizationURL(requestToken:<a href="../oAuth/OAuthToken.html">OAuthToken</a>):String</code><p>
+   Returns (STRING) the authorization URL (this function is the 2nd step for OFF SITE app authentication)
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">requestToken</span>:<a href="../oAuth/OAuthToken.html">OAuthToken</a></code> &mdash; token returned by calling getRequestToken() 
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="getComments()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getComments</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getComments(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the comments for a given user (API RESTRICTED TO APPLICATIONS WITH PERMISSIONS TO ACCESS THIS INFORMATION)
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's preferences to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getDateFormat()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getDateFormat</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDateFormat():String</code><p>
+   Returns the date format being used by the API
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="getFriends()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriends</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriends(userId:String, responseCallback:Function, page:int = -1, pageSize:int = -1, list:String = null, show:String = null):void</code><p>
+   Returns (XML) the friends of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of given user
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; specifies which page
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pageSize</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; specifies number of items per page
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">list</span>:String</code> (default = <code>null</code>)<code></code> &mdash; Can be one of 'top', 'online' or 'app'
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">show</span>:String</code> (default = <code>null</code>)<code></code> &mdash; can be a combination of 'mood', 'status', 'online' separated by '|'.  Do not put spaces in this string.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getFriendsActivitiesAtom()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriendsActivitiesAtom</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriendsActivitiesAtom(userId:String, responseCallback:Function, culture:String = null, lastRetrievalTimeStamp:String = null, activityTypes:String = null, extensions:String = null, composite:Boolean = false):void</code><p>
+   Returns (XML) activity stream of the user's friends 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID of user who's friends' activities are being pulled
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">culture</span>:String</code> (default = <code>null</code>)<code></code> &mdash; NOT USED YET
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">lastRetrievalTimeStamp</span>:String</code> (default = <code>null</code>)<code></code> &mdash; NOT USED YET
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">activityTypes</span>:String</code> (default = <code>null</code>)<code></code> &mdash; takes in piped (|) activity type parameters to filter result data; http://developerwiki.myspace.com/index.php?title=ActivityStream_Queries
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">extensions</span>:String</code> (default = <code>null</code>)<code></code> &mdash; takes in piped (|) extension parameters to organize result data; http://developerwiki.myspace.com/index.php?title=ActivityStream_Queries
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">composite</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Whether or not to return the stream as composite entries; http://developerwiki.myspace.com/index.php?title=ActivityStream_Queries
+   </td>
+</tr>
+</table>
+</div>
+<a name="getFriendship()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriendship</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriendship(userId:String, friendsIds:String, responseCallback:Function):void</code><p>
+   Returns (XML) the friendship of the given user with other users
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's friendships to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">friendsIds</span>:String</code> &mdash; IDs of friends to check, separated by semicolons
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getFriendsList()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriendsList</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriendsList(userId:String, responseCallback:Function, friendsIds:String, show:String = null):void</code><p>
+   Returns (XML) the specified friends of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of given user
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">friendsIds</span>:String</code> &mdash; list of friend ID's separated by semicolons
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">show</span>:String</code> (default = <code>null</code>)<code></code> &mdash; can be a combination of 'mood', 'status', 'online' separated by '|'.  Do not put spaces in this string.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getFriendsStatus()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriendsStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriendsStatus(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the status of the given user's friends
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's friends status to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getGlobalAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getGlobalAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getGlobalAppData(responseCallback:Function, keys:String = null):void</code><p>
+   Returns (XML) the global app data for a given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; ID (friendID) of user who's global app data to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keys</span>:String</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getIndicators()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getIndicators</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getIndicators(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the indicators for a given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's indicators to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getMediaItemMetadata()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMediaItemMetadata</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMediaItemMetadata(mediaItemUrl:String, responseCallback:Function):void</code><p>
+   Returns the data (XML) about the image
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mediaItemUrl</span>:String</code> &mdash; url string returned whena new photo is added (addPhoto())
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getMood()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMood</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMood(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the mood of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's mood to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getMoods()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMoods</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMoods(userId:String, responseCallback:Function, culture:String = null):void</code><p>
+   Returns (XML) the moods available for the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's moods to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">culture</span>:String</code> (default = <code>null</code>)<code></code> &mdash; identifier for the language in which the list of moods is returned (ex: ru-RU -> Russian)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPhoto()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPhoto</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPhoto(userId:String, photoId:String, responseCallback:Function = null):void</code><p>
+   Returns (XML) the photo for the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's photos to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">photoId</span>:String</code> &mdash; ID of the photo to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPhotos()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPhotos</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPhotos(userId:String, responseCallback:Function, page:int = -1, pageSize:int = -1):void</code><p>
+   Returns (XML) the photos for the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's photos to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; specifies which page
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pageSize</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; specifies number of items per page
+   </td>
+</tr>
+</table>
+</div>
+<a name="getPreferences()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPreferences</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPreferences(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the preferences for a given user (API RESTRICTED TO APPLICATIONS WITH PERMISSIONS TO ACCESS THIS INFORMATION)
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's preferences to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getProfile()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getProfile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getProfile(userId:String, responseCallback:Function = null, detailType:String = "full"):void</code><p>
+   Returns (XML) the profile for the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's profile to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; "basic", "full" or "extended"
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">detailType</span>:String</code> (default = "<code>full</code>")<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getRequestToken()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRequestToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRequestToken(responseCallback:Function, callbackURL:String = ""):void</code><p>
+   Returns (STRING) the request token (this function is the 1st step for OFF SITE app authorization)
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">callbackURL</span>:String</code> (default = "<code></code>")<code></code> &mdash; URL for user to be redirected to after signing in (developer-provided) 
+   </td>
+</tr>
+</table>
+</div>
+<a name="getStatus()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getStatus(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the status for the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's status to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getTimeZone()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getTimeZone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getTimeZone():int</code><p>
+   Returns the time zone being used by the API
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code></td>
+</tr>
+</table>
+</div>
+<a name="getUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getUser(responseCallback:Function, onCompleteFunction:Function = null):void</code><p>
+   Returns (XML) the current user object
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)   
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">onCompleteFunction</span>:Function</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="getUserFriendsAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUserFriendsAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getUserFriendsAppData(userId:String, responseCallback:Function, keys:String = null):void</code><p>
+   Returns (XML) user's friends' app data
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of target user
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keys</span>:String</code> (default = <code>null</code>)<code></code> &mdash; separated by semicolons
+   </td>
+</tr>
+</table>
+</div>
+<a name="getUserId()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUserId</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getUserId(responseCallback:Function):void</code><p>
+   Returns (STRING) the current user's ID
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided) 
+   </td>
+</tr>
+</table>
+</div>
+<a name="getVideo()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getVideo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getVideo(userId:String, videoId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the video of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's video to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">videoId</span>:String</code> &mdash; ID of video to be retrieved
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="getVideos()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getVideos</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getVideos(userId:String, responseCallback:Function):void</code><p>
+   Returns (XML) the videos of the given user
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's videos to retrieve
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="onIOError()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onIOError</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function onIOError(event:Event):void</code><p>
+   Basic callback function called on failure of any urlLoader request
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> &mdash; Error event
+   </td>
+</tr>
+</table>
+</div>
+<a name="postMood()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">postMood</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function postMood(userId:String, mood:int, responseCallback:Function = null):void</code><p>
+   Sets user's mood
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's mood is being set
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mood</span>:int</code> &mdash; Code of mood (e.g., 3 ( = annoyed))
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="postStatus()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">postStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function postStatus(userId:String, status:String, responseCallback:Function = null):void</code><p>
+   Sets user's status
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's status is being set
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">status</span>:String</code> &mdash; user's new status, which will be updated
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="putAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">putAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function putAppData(userId:String, appParams:Object, responseCallback:Function = null):void</code><p>
+   Sets the app data using key/value pairs
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code> &mdash; ID (friendID) of user who's app data to set
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">appParams</span>:Object</code> &mdash; hash object for data to be set, separated by semicolons
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="putGlobalAppData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">putGlobalAppData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function putGlobalAppData(appParams:Object, responseCallback:Function = null):void</code><p>
+   Sets the global app data using key/value pairs
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">appParams</span>:Object</code> &mdash; hash object for data to be set, separated by semicolons
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; function to be called upon completion of the url request (user-provided)
+   </td>
+</tr>
+</table>
+</div>
+<a name="setDateFormatTimeZone()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setDateFormatTimeZone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setDateFormatTimeZone(dateFormat:String, timeZone:int):void</code><p>
+   Sets the date format and time zone format for the response times
+   See the developer wiki for more details - http://developerwiki.myspace.com/index.php?title=Date%2C_Time_and_Timezone_Formats
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dateFormat</span>:String</code> &mdash; one of the following date formats (ISO8601, GMT, EPOCH, UTC) 
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">timeZone</span>:int</code> &mdash; integer for the time zone
+   </td>
+</tr>
+</table>
+</div>
+<a name="setMood()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setMood</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setMood(userId:String, mood:int, responseCallback:Function = null):void</code><p>
+   Wrapper for postMood() 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mood</span>:int</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setStatus()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setStatus(userId:String, status:String, responseCallback:Function = null):void</code><p>
+   Wrapper for postStatus() 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userId</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">status</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responseCallback</span>:Function</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">MySpaceID AS3 SDK</center>
+</div>
+</body>
+</html>
+<!--MySpaceID AS3 SDK-->

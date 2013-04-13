@@ -1,0 +1,60 @@
+	.yui-skin-sam .yui-calendar 
+	{
+		font-family: tahoma;
+		font-size: 11px;
+		color: #eeeeee;
+	}
+
+	.yui-skin-sam .yui-calcontainer 
+	{ 
+			background-color:#333333; 
+			border:0px solid #808080; 
+			padding: 5px;
+	} 
+
+	.yui-skin-sam .yui-calendar .calweekdaycell 
+	{
+		color: #dddddd;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell.today 
+	{
+		background-color: white;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell.today a
+	{
+		background-color: #C229CF;
+		color: #eeeeee;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell 
+	{
+		background-color: #dddddd;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell a 
+	{
+		color: #222222;
+	}
+	.yui-skin-sam .yui-calendar td.calcell.oom 
+	{
+		background-color: #bbbbbb;
+		color: #666666;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell.calcellhover 
+	{
+		background-color: #eeeeee;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell.calcellhover a 
+	{
+		background-color: #222222;
+	}
+
+	.yui-skin-sam .yui-calendar td.calcell.selected a 
+	{
+		background-color: #444444;
+		color: #dddddd;
+	}

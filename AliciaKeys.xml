@@ -1,0 +1,135 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<application>
+	<configuration>
+		<fonts>
+			<font name="MyriadPro" styles="regular|bold" src="http://ksolo.myspacecdn.com/google/us/ArtistBanners/template/fonts/limited/MyriadPro.swf"/>
+			<font name="Mini7Tight" styles="regular" src="http://ksolo.myspacecdn.com/google/us/ArtistBanners/template/fonts/limited/Mini7Tight.swf"/>
+		</fonts>
+		<settings>
+			<cue>enabled</cue>
+		</settings>
+	</configuration>
+	<ui>
+		<div id='baseDIV' style='width:465px; height:760px; background-color:#000000;'>
+			<div id='backgroundImage' fade="start:0;duration:.5;ease:Regular.easeOut;cue:.5;" style='position:absolute;width:465px; height:760px; background-image:url("http://ksolo.myspacecdn.com/google/us/ArtistBanners/template/data/AliciaKeys/bg.jpg");'></div>
+			<div id='content' style='position:absolute; width:100%; height:100%'>
+				<div id="artistArea" style="float:left;margin-bottom:5px;width:100%;height:200px;">
+					<div id="artistName" style='position:absolute;width:208px; height:50px; background-image:url("http://ksolo.myspacecdn.com/google/us/ArtistBanners/template/data/AliciaKeys/ak.png"); float:left;width:100%;height:91px;left:7px;top:7px;opacity:.95;' motion="xStart:-475; xDuration:.25; xEase:Regular.easeOut;cue:1;"></div>
+					<div id="contestDate" style="float:left;width:250px;height:30px;left:5px;top:0px;embedFonts:true;" fade="start:0;duration:.25;ease:Regular.easeOut;cue:1.25;"><![CDATA[<textformat leading='0px'><p align='left'><font size='12' face='Myriad Pro' color='#db91ae'>January 19th 3pm PST – Feb 2nd 3pm PST!</font></p></textformat>]]></div>
+				</div>
+				<div id="endedArea" style="float:left;width:100%;height:192px;top:0px;" fade="start:0;duration:.5;ease:Regular.easeOut;cue:1.5;" motion="yStart:100; yDuration:.5; yEase:Regular.easeOut;cue:1.5">
+					<div id="recordYourVersion" style="width:300px;height:60px;left:11px;embedFonts:true;"><![CDATA[<textformat leading='-6px'><font size='20' face='Myriad Pro' color='#000'><b>Record your version<br/>for a chance to win!</b></font></textformat>]]></div>
+					<!--
+				<div style='width: 500px; height: 400px; position: absolute'>
+					<object width="550" height="400">
+					<param name="movie" value="http://lads-stage.myspace.com/MediaPlayer/Main.swf" />
+					<embed src="http://lads-stage.myspace.com/MediaPlayer/Main.swf" width="550" height="400">
+					</embed>
+					</object>
+				</div>
+					-->
+					
+					
+				<div id="songButtons" style="float:left;width:200px;height:35px;left:45px;" shadow="color:#000000;distance:0;blurX:6;blurY:6;alpha:.5;">
+					
+
+						<div id="song1Button" style='top: 9px; width:200px; height:40px;'>
+							<div id="song1Button_up" style='position:absolute; width:200px; height:40px;'>
+								<gradientrounded id="song1Button_up_background" style='border:1px solid #2c2c2c; width:100%; height:100%; background-color:#2c2c2c; roundedSize:10; gradientColors:#FFFFFF,1|#8F8F8F,1;'></gradientrounded>
+								<div id="song1Button_up_label" style='position:absolute; width:100%; height:100%;'>
+									<div id='song1Button_up_title' style='float:left; margin-left:50px; margin-top:1px; width:195px; height:40px;embedFonts:true;'><![CDATA[<font size='14' face='Myriad Pro' color='#000000'><b>Put It In A Love Song<br/>       Feat. Beyonce</b></font>]]></div>
+									<polygon id="song1Button_up_arrow" style='position:absolute; background-color: #FD0101; points:0,0|8,4|0,8; width:10px; height:10px; left:186px;top:18px;'></polygon>
+								</div>
+							</div>
+							
+							
+							<div id="song1Button_over" style='position:absolute; width:200px; height:40px;'>
+								<gradientrounded id="song1Button_over_background" style='border:1px solid #2c2c2c; width:100%; height:100%; background-color:#2c2c2c; roundedSize:10; gradientColors:#FFFFFF,1|#9F9F9F,1;'></gradientrounded>
+								<div id="song1Button_over_label" style='position:absolute; width:100%; height:100%;'>
+									<div id='song1Button_over_title' style='float:left; margin-left:50px; margin-top:1px; width:200px; height:40px;embedFonts:true;'><![CDATA[<font size='14' face='Myriad Pro' color='#000000'><b>Put It In A Love Song<br/>       Feat. Beyonce</b></font>]]></div>
+									<polygon id="song1Button_over_arrow" style='position:absolute; background-color: #FD0101F; points:0,0|8,4|0,8; width:10px; height:10px; left: 186px; top: 18px;'></polygon>
+								</div>
+							</div>
+							
+							<div id='song1Button_hot' hover="target:song1Button_over;" href='http://www.myspace.com' style='margin:1px; position:absolute; width:100%; height:100%; opacity:0; background-color:#FF00FF;'></div>
+						</div>	
+
+
+
+						<div id="song1Button" style='top: 9px; width: 200px; height: 22px;'>
+							<div id="song1Button_up" style='position:absolute; width: 200px; height: 22px;'>
+								<gradientrounded id="song1Button_up_background" style='border:1px solid #2c2c2c; width:100%; height:100%; background-color:#2c2c2c; roundedSize:10; gradientColors:#FFFFFF,1|#8F8F8F,1;'></gradientrounded>
+								<div id="song1Button_up_label" style='position:absolute; width:100%; height:100%;'>
+									<div id='song1Button_up_title' style='float:left; margin-left: 25px; margin-top:1px; width: 200px; height: 20px;embedFonts:true;'><![CDATA[<font size='14' face='Myriad Pro' color='#000000'><b>Doesn’t Mean Anything</b></font>]]></div>
+									<polygon id="song1Button_up_arrow" style='position:absolute; background-color: #FD0101; points:0,0|8,4|0,8; width:10px; height:10px; left: 186px; top: 9px;'></polygon>
+								</div>
+							</div>
+							
+							
+							<div id="song1Button_over" style='position:absolute; width: 200px; height: 22px;'>
+								<gradientrounded id="song1Button_over_background" style='border:1px solid #2c2c2c; width:100%; height:100%; background-color:#2c2c2c; roundedSize:10; gradientColors:#FFFFFF,1|#9F9F9F,1;'></gradientrounded>
+								<div id="song1Button_over_label" style='position:absolute; width:100%; height:100%;'>
+									<div id='song1Button_over_title' style='float:left; margin-left: 25px; margin-top:1px; width: 200px; height: 20px;embedFonts:true;'><![CDATA[<font size='14' face='Myriad Pro' color='#000000'><b>Doesn’t Mean Anything</b></font>]]></div>
+									<polygon id="song1Button_over_arrow" style='position:absolute; background-color: #FD0101F; points:0,0|8,4|0,8; width:10px; height:10px; left: 186px; top: 9px;'></polygon>
+								</div>
+							</div>
+							
+							<div id='song1Button_hot' hover="target:song1Button_over;" href='http://www.myspace.com' style='margin:1px; position:absolute; width:100%; height:100%; opacity:0; background-color:#FF00FF;'></div>
+						</div>	
+						
+
+
+						<div id="song1Button" style='width: 200px; height:22px;'>
+							<div id="song1Button_up" style='position:absolute; width: 200px; height:22px;'>
+								<gradientrounded id="song1Button_up_background" style='border:1px solid #2c2c2c; width:100%; height:100%; background-color:#2c2c2c; roundedSize:10; gradientColors:#FFFFFF,1|#8F8F8F,1;'></gradientrounded>
+								<div id="song1Button_up_label" style='position:absolute; width:100%; height:100%;'>
+									<div id='song1Button_up_title' style='float:left; margin-left: 73px; margin-top:1px; width: 200px; height:20px;embedFonts:true;'><![CDATA[<font size='14' face='Myriad Pro' color='#000000'><b>No One</b></font>]]></div>
+									<polygon id="song1Button_up_arrow" style='position:absolute; background-color: #FD0101; points:0,0|8,4|0,8; width:10px; height:10px; left: 186px; top: 9px;'></polygon>
+								</div>
+							</div>
+							
+							
+							
+							<div id="song1Button_over" style='position:absolute; width: 200px; height:22px;'>
+								<gradientrounded id="song1Button_over_background" style='border:1px solid #2c2c2c; width:100%; height:100%; background-color:#2c2c2c; roundedSize:10; gradientColors:#FFFFFF,1|#9F9F9F,1;'></gradientrounded>
+								<div id="song1Button_over_label" style='position:absolute; width:100%; height:100%;'>
+									<div id='song1Button_over_title' style='float:left; margin-left: 73px; margin-top:1px; width: 200px; height:20px;embedFonts:true;'><![CDATA[<font size='14' face='Myriad Pro' color='#000000'><b>No One</b></font>]]></div>
+									<polygon id="song1Button_over_arrow" style='position:absolute; background-color: #FD0101F; points:0,0|8,4|0,8; width:10px; height:10px; left: 186px; top: 9px;'></polygon>
+								</div>
+							</div>
+							
+							<div id='song1Button_hot' hover="target:song1Button_over;" href='http://www.myspace.com' style='margin:1px; position:absolute; width:100%; height:100%; opacity:0; background-color:#FF00FF;'></div>
+						</div>
+						
+						<div style='width: 95px, height: 97px; left: -43px; top: -17px; position:absolute; background-image:url("http://ksolo.myspacecdn.com/google/us/ArtistBanners/template/data/AliciaKeys/burst.png");'/>
+					</div>
+				</div>
+
+			
+
+		
+		
+				
+				<div id="prizeDetails" style="float:left;margin:5px;width:455px;height:335px;">
+					<div id="grandPrizeDetails" style="border:1px solid #e3a0bc;float:left;width:455px;height:140px;background-color:#77787e;opacity:.95;" transition="type:openHorizontal; duration:.25; ease:Regular.easeOut; cue:2;">
+						<div id="grandPrize" style="width:300px;height:35px;left:11px;embedFonts:true;"><![CDATA[<font size='28' face='Myriad Pro' color='#FFFFFF'><b>GRAND PRIZE (1)</b></font>]]></div>
+						<div id="grandPrizeBullets" style="width:400px;height:35px;left:11px;left:25px;embedFonts:true;"><![CDATA[<textformat leading='-2px'><font size='20' face='Myriad Pro' color='#FFFFFF'>• Two Tickets to see Alicia Keys Live in Concert<br/>at Madison Square Garden<br/>• Travel and Accommodation for 2 <br/>to New York City</font></textformat>]]></div>
+					</div>
+					<div id="runnerUpDetails" style="margin-top:0px;float:left;width:100%;height:125px;opacity:1;" transition="type:openVertical; duration:.25; ease:Regular.easeOut; cue:2.25;">
+						<div id="secondPlaceDetails" style="border:1px solid #e3a0bc;float:left;margin-top:5px;width:225px;height:125px;background-color:#77787e;opacity:.95;">
+							<div id="secondPrize" style="embedFonts:true;width:298px;height:30px;left:10px;"><![CDATA[<font size='24' face='Myriad Pro' color='#FFFFFF'><b>SECOND PRIZE (1)</b></font>]]></div>
+							<div id="secondPrizeBullets" style="embedFonts:true;width:400px;height:30px;left:11px;left:10px;"><![CDATA[<textformat leading='0px'><font size='12' face='Myriad Pro' color='#FFFFFF'>• The Element of Freedom - Empire<br/>Edition exclusive EP available exclusively<br/>at aliciakeys.com.<br/><font size='13' face='Myriad Pro' color='#FFFFFF'>• Signed 8x10<br/>• Alicia Keys Poster<br/>($50 value)</font></textformat>]]></div>
+						</div>
+						<div id="thirdPlaceDetails" style="border:1px solid #e3a0bc;float:left;margin-top:5px;margin-left:3px;width:225px;height:125px;background-color:#77787e;opacity:.95;">
+							<div id="thirdPrize" style="embedFonts:true;width:290px;height:35px;left:10px;"><![CDATA[<font size='24' face='Myriad Pro' color='#FFFFFF'><b>THIRD PRIZE (1)</b></font>]]></div>
+							<div id="thirdPrizeBullets" style="embedFonts:true;width:400px;height:35px;left:11px;left:10px;"><![CDATA[<textformat leading='0px'><font size='12' face='Myriad Pro' color='#FFFFFF'>• The Element of Freedom - Empire<br/>Edition exclusive EP available exclusively<br/>at aliciakeys.com.<br/><font size='13' face='Myriad Pro' color='#FFFFFF'>• Poster<br/></font>($25 value)</textformat>]]></div>
+						</div>
+					</div>
+					<div id="qualifications" style="border:1px solid #e3a0bc;float:left;margin-top:12px;width:455px;height:63px;background-color:#77787e;opacity:.95;" transition="type:openHorizontal; duration:.25; ease:Regular.easeOut; cue:2.5;">
+						<div id="qualificationsText" style="embedFonts:true;width:455px;height:55px;left:1px;"><![CDATA[<textformat leading='-2px'><font size='10' face='Mini 7 Tight' color='#FFFFFF'>Qualifications:<br/>Recording must be made between 3pm PST on 01/19/10 and 3pm PST on 02/02/10.  Entrant must be legal resident of the 50 (fifty) United States or Washington D.C. or Canada (excluding Quebec).  Must be at least 14 years of age.  Recording must be Public on MySpace Karaoke with Feedback and Rating enabled and must receive at least 100 plays to be eligible for submission.  By entering, you agree to the full set of rules and regulations.</font></textformat>]]></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui>
+</application>

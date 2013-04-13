@@ -1,0 +1,181 @@
+.text_header_black
+{
+	font-family: Tahoma;
+	color: #22231e;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.text_header
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.text_body_black
+{
+	font-family: Tahoma;
+	color: #22231e;
+	font-size: 11px;
+}
+
+.text_body_large_white
+{
+	font-family: Tahoma;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.text_header_red
+{
+	font-family: Tahoma;
+	color: #cc0033;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.text_body_white
+{
+	font-family: Tahoma;
+	color: white;
+	font-size: 12px;
+}
+
+.text_body_small
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 11px;
+}
+
+.text_body_small a
+{
+	color: orange;
+}
+
+.text_body
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 12px;
+}
+
+.text_body a
+{
+	color: orange;
+}
+
+.text_message
+{
+	font-family: Tahoma;
+	color: orange;
+	font-size: 12px;
+}
+
+.text_nav
+{
+	background-color: black;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 15px;
+	font-weight: bold;
+	color: #9dca3a;
+	height: 28px;
+}
+
+.text_nav a
+{
+	color: #9dca3a;
+	text-decoration: none;
+}
+
+.text_nav_over
+{
+	background-color: #9dca3a;
+}
+
+.text_nav_over a
+{
+	color: black;
+}
+
+.form
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 12px;
+	background-color: #555555;
+	border: 1px solid #22231e;
+	width: 150px;
+}
+
+.formButton
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 12px;
+	background-color: #22231e;
+	border: 1px solid #777777;
+	width: 100px;
+}
+
+body
+{
+	background:#111 url(http://www.addictionsf.com/images/bg_s.jpg) fixed top center;
+	text-align: center;
+	height:100%;
+}
+
+.side_content
+{
+
+	background-color: #9dca3a;
+	background-image: url(http://www.addictionsf.com/images/bg_gradient_green_L.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+
+	width: 250px;
+	height: 170px;
+	padding-bottom: 10px;
+}
+
+.news_content
+{
+	background-image: url(http://www.addictionsf.com/images/bg_gradient_red.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+
+	width: 250px;
+	background-color: #ff0000;
+	padding-bottom: 10px;
+}
+
+.main_content
+{
+
+	background-color: #22231e;
+	background-image: url(http://www.addictionsf.com/images/bg_gradient_gray.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	width: 625px; 
+	margin: 0px 260px 0px 0px;
+}
+
+.main_content_data
+{
+
+	background-color: #22231e;
+	background-image: url(http://www.addictionsf.com/images/bg_gradient_gray.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	padding-bottom: 40px;
+}
+
+.flyer
+{
+	border: 1px solid #9dca3a; 
+	padding: 5px;
+}

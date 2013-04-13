@@ -1,0 +1,6 @@
+This sample demonstrates the usage of MySpaceID APIs from a desktop app built using AIR
+
+NOTE: Whe the app is run, the MySpace Auth page is displayed inside of a pop up window.
+      This is for *API DEMONSTRATION PURPOSES ONLY*. 
+      The recommended method is to open the myspace authorization URL in a browser window for security purposes
+      

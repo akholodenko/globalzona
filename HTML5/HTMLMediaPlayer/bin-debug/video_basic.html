@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>
+		HTML5 Video - Video Tag Version
+	</title>
+
+	<style>
+		.div_wrapper
+		{
+			position: relative;
+		}
+		
+		.div_wrapper div
+		{
+			position: absolute;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<script language="javascript" src="../libs/jquery.js"></script>
+	<script language="javascript" src="../com/myspace/analytics.js"></script>
+    <script language="javascript" src="../com/myspace/menus/videoBasicMenu.js"></script>		
+		
+	<div class="div_wrapper">
+		<div style="width: 640px; height: 480px; background-color: rgb(0, 0, 0);">
+			<video id="videoTag" style="width: 100%; height: 100%;" controls="" tabindex="0">				
+				<source type="video/mp4" src="big_buck_bunny.mp4"></source>
+				<source type="video/ogg" src="big_buck_bunny.ogv"></source>
+			</video>
+		
+			
+
+		</div>
+		<div id="videoMenu" style="width: 640px; height: 480px; background-color: red;">
+	   		TEST
+	   		<a href="#" onclick="alert('test'); return false;">hide</a>
+	    </div>
+	</div>		
+
+	
+	<script language="javascript">
+		var data = new VideoPlayerData();
+
+		data.mpguid = "";	//media player guid
+		data.pid = "-2272814037739628131";	//Persistent End User ID 
+		data.uid = "-1";	//user id
+		data.pc = "en-US";	//culture id
+		data.refpg = "http%3a%2f%2fvids.myspace.com%2findex.cfm%3ffuseaction%3dvids.individual%26videoid%3d62784948";	//embed url
+		data.srchid = "0";	//search id
+		data.cip = "216.205.224.64";	//client ip
+		data.sip = "172.16.0.2";	//server ip
+		data.prid = "-1";	//profile id
+		data.prtype = "-1";	//profile type
+		data.ili = "1";	//is logged in
+		data.pf = "VideosIndividual";	//page context
+		
+		data.videoTagID = "videoTag";	//ID param value of VIDEO tag
+
+		//create instance of analytics; all event listeners are attached in constructor
+		var html5VideoPlayerAnalytics = new HTML5VideoPlayerAnalytics(data);
+        
+        //create instance of video 
+        var html5VideoPlayerMenu = new VideoMenu(18001);
+	</script>
+    
+    <!-- 
+    <p/>
+    <a href='#' onclick="html5VideoPlayerMenu.showMenu(); return false;">show menu</a>
+     -->
+</body>
+</html>

@@ -1,0 +1,117 @@
+/*  jQuery - TOOLTIP */
+
+#tooltip{
+	position:absolute;
+	border: 4px solid yellow;
+	/*background:#f7f5d1;*/
+	background-color: #444444;
+	padding: 7px;
+	color: yellow;
+	display:none;
+
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+
+	line-height: 16px;
+}	
+
+#bubbleTip{
+	position:absolute;
+	background: url(http://www.globalzona.com/party/images/ToolTipBubbleShort.png);
+	display:none;
+
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #dddddd;
+	width: 200px;
+	height: 46px;
+}
+
+.bubbleTipBody {
+	padding-top: 17px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+/*  jQuery - TOOLTIP END*/
+
+/* jTip */
+
+#JT_arrow_left{
+	background-image: url(http://www.globalzona.com/party/images/arrow_left.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	left:-12px;
+	height:23px;
+	width:10px;
+    top:-3px;
+}
+
+#JT_arrow_right{
+	background-image: url(http://www.globalzona.com/party/images/arrow_right.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	height:23px;
+	width:11px;
+    top:-2px;
+}
+
+#JT {
+	position: absolute;
+	z-index:100;
+	border: 2px solid #CCCCCC;
+	background-color: #fff;
+}
+
+#JT_copy{
+	padding:10px 10px 10px 10px;
+	color:#333333;
+}
+
+.JT_loader{
+	background-image: url(http://www.globalzona.com/party/images/loader.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width:100%;
+	height:12px;
+}
+
+#JT_close_left{
+	background-color: #CCCCCC;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+	font-weight:bold;
+}
+
+#JT_close_right{
+	background-color: #CCCCCC;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+	font-weight:bold;
+}
+
+#JT_copy p{
+margin:3px 0;
+}
+
+#JT_copy img{
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+}
+
+.jTip{
+cursor:help;
+}
+
+/* jTip -END */

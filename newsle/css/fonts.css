@@ -1,0 +1,132 @@
+.postHeaderText
+{
+	font-family: Tahoma;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.postHeaderText a
+{
+	color: #666666;
+}
+
+.postHeaderText a:hover
+{
+	color: #222222;
+}
+
+.postSubheaderText
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #666666;
+	line-height: 20px;
+}
+
+.navigation
+{
+	font-family: Tahoma;
+	font-size: 13px;
+}
+
+.navigation a
+{
+	color: #999999;
+}
+
+.navigation a:hover
+{
+	color: #222222;
+}
+
+.navigationSelected
+{
+	font-family: Tahoma;
+	font-size: 13px;
+	color: #222222;
+}
+
+.postText
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	line-height: 25px;
+	color: #415E88;
+}
+
+.postText a
+{
+	color: #415E88;
+	text-decoration: none;
+}
+
+.paginationText
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	line-height: 15px;
+	color: #415E88;
+}
+
+.paginationText a
+{
+	color: #415E88;
+	text-decoration: none;
+}
+
+.postTopText
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	line-height: 25px;
+	color: #ffffff;
+}
+
+.postTopText a
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.messageText
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.submitForm
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #cccccc;
+	border: 1px solid #415E88;
+	width: 100%;
+}
+
+.submitFormCategory
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #555555;
+	border: 1px solid #415E88;
+	width: 100%;
+}
+
+.submitFormButton
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #555555;
+	background-color: #dddddd;
+	border: 1px solid #415E88;
+}
+
+.moduleHeaderText
+{
+	font-family: Tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+}

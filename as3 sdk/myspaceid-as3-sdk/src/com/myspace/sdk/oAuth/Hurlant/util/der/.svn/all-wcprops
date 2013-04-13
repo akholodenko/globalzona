@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der
+END
+IAsn1Type.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/IAsn1Type.as
+END
+Integer.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/Integer.as
+END
+Type.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/Type.as
+END
+PrintableString.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/PrintableString.as
+END
+Sequence.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/Sequence.as
+END
+ObjectIdentifier.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/ObjectIdentifier.as
+END
+DER.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/DER.as
+END
+UTCTime.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/UTCTime.as
+END
+ByteString.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/ByteString.as
+END
+Set.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/Set.as
+END
+OID.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/Hurlant/util/der/OID.as
+END

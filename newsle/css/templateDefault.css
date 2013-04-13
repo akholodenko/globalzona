@@ -1,0 +1,148 @@
+.roundCornerHeader{display:block}
+.roundCornerHeader *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#415E88}
+.roundCornerHeader1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #a3b0c2;
+  border-right:1px solid #a3b0c2;
+  background:#6c82a1}
+.roundCornerHeader2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #dcdfe3;
+  border-right:1px solid #dcdfe3;
+  background:#61799b}
+.roundCornerHeader3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #61799b;
+  border-right:1px solid #61799b;}
+.roundCornerHeader4{
+  border-left:1px solid #a3b0c2;
+  border-right:1px solid #a3b0c2}
+.roundCornerHeader5{
+  border-left:1px solid #6c82a1;
+  border-right:1px solid #6c82a1}
+.roundCornerHeaderfg{
+  background:#415E88}
+
+.roundCornerBody{display:block}
+.roundCornerBody *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#ffffff}
+.roundCornerBody1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #f5f5f5;
+  border-right:1px solid #f5f5f5;
+  background:#fafafa}
+.roundCornerBody2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #efefef;
+  border-right:1px solid #efefef;
+  background:#fbfbfb}
+.roundCornerBody3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #fbfbfb;
+  border-right:1px solid #fbfbfb;}
+.roundCornerBody4{
+  border-left:1px solid #f5f5f5;
+  border-right:1px solid #f5f5f5}
+.roundCornerBody5{
+  border-left:1px solid #fafafa;
+  border-right:1px solid #fafafa}
+.roundCornerBodyfg{
+  background:#ffffff}
+
+.roundCornerSide{display:block}
+.roundCornerSide *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#89B1E9}
+.roundCornerSide1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #c2d3eb;
+  border-right:1px solid #c2d3eb;
+  background:#a2c0ea}
+.roundCornerSide2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #e3e7ed;
+  border-right:1px solid #e3e7ed;
+  background:#9cbce9}
+.roundCornerSide3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #9cbce9;
+  border-right:1px solid #9cbce9;}
+.roundCornerSide4{
+  border-left:1px solid #c2d3eb;
+  border-right:1px solid #c2d3eb}
+.roundCornerSide5{
+  border-left:1px solid #a2c0ea;
+  border-right:1px solid #a2c0ea}
+.roundCornerSidefg{
+  background:#89B1E9}
+
+.roundCornerPopular{display:block}
+.roundCornerPopular *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#bbbbbb}
+.roundCornerPopular1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #d8d8d8;
+  border-right:1px solid #d8d8d8;
+  background:#c7c7c7}
+.roundCornerPopular2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #e8e8e8;
+  border-right:1px solid #e8e8e8;
+  background:#c4c4c4}
+.roundCornerPopular3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #c4c4c4;
+  border-right:1px solid #c4c4c4;}
+.roundCornerPopular4{
+  border-left:1px solid #d8d8d8;
+  border-right:1px solid #d8d8d8}
+.roundCornerPopular5{
+  border-left:1px solid #c7c7c7;
+  border-right:1px solid #c7c7c7}
+.roundCornerPopularfg{
+  background:#bbbbbb}
+ 

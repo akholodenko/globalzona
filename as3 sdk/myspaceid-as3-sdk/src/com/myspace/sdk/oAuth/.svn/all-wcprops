@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/47/trunk/src/com/myspace/sdk/oAuth
+END
+OAuthToken.as
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/32/trunk/src/com/myspace/sdk/oAuth/OAuthToken.as
+END
+OAuthSignatureMethod_HMAC_SHA1.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/OAuthSignatureMethod_HMAC_SHA1.as
+END
+OAuthRequest.as
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/47/trunk/src/com/myspace/sdk/oAuth/OAuthRequest.as
+END
+OAuthSignatureMethod_PLAINTEXT.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/OAuthSignatureMethod_PLAINTEXT.as
+END
+IOAuthSignatureMethod.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/IOAuthSignatureMethod.as
+END
+OAuthConsumer.as
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/src/com/myspace/sdk/oAuth/OAuthConsumer.as
+END

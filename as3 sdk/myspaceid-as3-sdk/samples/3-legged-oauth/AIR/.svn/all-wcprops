@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/38/trunk/samples/3-legged-oauth/AIR
+END
+AuthPopupWindow.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/36/trunk/samples/3-legged-oauth/AIR/AuthPopupWindow.as
+END
+OAuthCallbackEvent.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/36/trunk/samples/3-legged-oauth/AIR/OAuthCallbackEvent.as
+END
+airapp.mxml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/37/trunk/samples/3-legged-oauth/AIR/airapp.mxml
+END
+airapp-app.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/36/trunk/samples/3-legged-oauth/AIR/airapp-app.xml
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/38/trunk/samples/3-legged-oauth/AIR/README
+END

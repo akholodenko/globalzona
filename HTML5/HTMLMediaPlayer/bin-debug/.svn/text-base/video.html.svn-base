@@ -1,0 +1,60 @@
+<!-- {} DENOTES SERVER SIDE MODIFICATIONS -->
+<html>
+<head></head>
+<body>
+			
+	<div id="vid" style="width: 100%; height: 100%; overflow: hidden">
+	</div>
+	
+	<script language="javascript">
+		var HTML5_VIDEO_PLAYER_ASSET_PATH = '../assets'; // {CHANGE TO DIR PATH OF IMAGE ASSETS}
+	</script>
+	
+	<script language="javascript" src="../libs/jquery.js"></script> <!-- {CHANGE TO PATH OF JQUERY} -->
+	<script language="javascript" src="../libs/jquery.ui.js"></script> <!-- {CHANGE TO PATH OF JQUERY UI} -->
+	<script language="javascript" src="../com/myspace/menus/defaultVideoMenu.js"></script> <!-- {CHANGE TO PATH OF VIDEO MENU JS} -->
+	<script language="javascript" src="../com/myspace/video.js"></script> <!-- {CHANGE TO PATH OF VIDEO JS} -->
+	
+	<script type="text/javascript">
+		//var AKAMAI_MEDIA_ANALYTICS_CONFIG_FILE_PATH = 'http://79423.analytics.edgesuite.net/html5/config.xml';
+		var AKAMAI_MEDIA_ANALYTICS_CONFIG_FILE_PATH = 'http://csma95357.analytics.edgesuite.net/config/beacon-611.xml';
+	</script>
+	<script type="text/javascript" src="http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js" >
+		setAkamaiMediaAnalyticsData("playerName", "testPlayer", movie);
+	</script>
+	
+	
+	<script language="javascript">
+
+$(window).load(
+	function() {
+		var data = new VideoPlayerData();
+
+		data.sources = {
+			"video/ogg": "big_buck_bunny.ogv", // {CHANGE TO PATH OF OGG VIDEO IF NEEDED, OTHERWISE REMOVE}
+			"video/mp4": "big_buck_bunny.mp4" // {CHANGE TO PATH OF MP4 VIDEO}
+		};
+		data.autoplay = false; // {AUTOPLAY} 
+		data.mediaId = 18001; // {MEDIA ID OF VIDEO} 
+		data.imageStillSrc = "bird.jpg"; // {PATH TO IMAGE STILL}
+		data.poster = "bird.jpg"; // {PATH TO IMAGE STILL}
+		data.mpguid = ""; // {MEDIA PLAYER GUID}
+		data.pid = "-2272814037739628131"; // {PERSISTENT END USER ID}
+		data.uid = "-1"; // {USER ID}
+		data.pc = "en-US"; // {CULTURE ID}
+		data.refpg = "http%3a%2f%2fvids.myspace.com%2findex.cfm%3ffuseaction%3dvids.individual%26videoid%3d62784948"; // {EMBED URL}
+		data.srchid = "0"; // {SEARCH ID}
+		data.cip = "216.205.224.64"; // {CLIENT IP}
+		data.sip = "172.16.0.2"; // {SERVER IP}
+		data.prid = "-1"; // {PROFILE ID}
+		data.prtype = "-1"; // {PROFILE TYPE}
+		data.ili = "1"; // {LOGGED IN}
+		data.pf = "VideosIndividual"; // {PAGE CONTEXT}
+
+		var video = new VideoPlayer("vid", data);
+	}
+);
+	
+	</script>
+</body>
+</html>

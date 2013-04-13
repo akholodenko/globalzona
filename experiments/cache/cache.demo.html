@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="http://n2i.netshelter.com/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="cache.class.js" type="text/javascript"></script>
+	</head>
+	<body>
+		test js caching
+		<script>
+			var key = "firstTest";
+			Cache.store(key, "<div>name</div>");
+			console.log("stored (string)");
+			console.log(Cache.bin);
+						
+			var fetchedValue = Cache.fetch(key);
+			console.log("fetched (string)");
+			console.log(fetchedValue);
+
+			Cache.store(key, {name:"Artem",email:"artemk@gmail.com"});
+			console.log("stored (array)");
+			console.log(Cache.bin);
+			
+			var fetchedValue = Cache.fetch(key);
+			console.log("fetched (array)");
+			console.log(fetchedValue.name);
+			console.log(fetchedValue.email);
+			
+			Cache.storeFromURL("ajaxLoadKey", "cache.fromUrl.html");
+			console.log("stored (from url)");
+			console.log(Cache.bin);
+			
+			var fetchedValue = Cache.fetch("ajaxLoadKey");
+			console.log("fetched (from url)");
+			console.log(fetchedValue);
+			/*
+			Cache.clear();
+			console.log("cleared");
+			console.log(Cache.bin);
+			*/
+		</script>
+	</body>
+</html>

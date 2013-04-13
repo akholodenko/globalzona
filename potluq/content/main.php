@@ -1,0 +1,3 @@
+<script>
+	AjaxUtils.GetMain();
+</script>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication width="500" height="600" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" title="MySpaceID SDK AS3 Demo">
+	<mx:Script>
+		<![CDATA[
+			import SDK.MySpaceID.MySpace;
+			import SDK.Utils.URLEncoding;
+			import SDK.oAuth.*;		
+			
+			
+			public var userId_internal:String = "12353591";	//ADK's user id
+			private var _xml_ns:Namespace = new Namespace("api-v1.myspace.com");
+			private var _timerStatus:Timer;
+			private var _timerMood:Timer;
+			private var _moodId:String;
+			private var _isMoodUpdating:Boolean = false;
+			
+			private var oAuthToken:OAuthToken;
+        	private var oAuthAccessToken:OAuthToken;
+        	
+        	private var key:String = "http://www.myspace.com/443468196";
+        	private var secret:String = "eaa6edf5836c4d37948aef0f1cfc2e35";
+        	
+        	private var key_OFFSITE:String = "77f44916a5144c97ad1ddc9ec53338cc";
+        	private var secret_OFFSITE:String = "51951d1f872c454d8932cd5f135623ae";
+			
+			//MySpace object with hardcoded (for testing) key and secret)
+			public var ms:MySpace;
+			private var ms2:MySpace;
+			
+			public function getAll ():void
+			{
+				ms = new MySpace(this.key, this.secret);
+				
+				this.getProfile();
+				this.getActivities();
+				this.getMoods();
+				this.getMood();	//get user's current mood
+				this.getStatus();				
+				
+				this.friendsButton.visible = true;
+				
+				//ms.getAlbums(this.userId_internal, this.onGetRequestComplete);
+				//ms.getAlbum(this.userId_internal, "818818", this.onGetRequestComplete);
+				//ms.getAlbumPhoto(this.userId_internal, "818818", "114491", this.onGetRequestComplete);
+				//ms.getAlbumInfo(this.userId_internal, "818818", this.onGetRequestComplete);
+				//ms.getPhotos(this.userId_internal, this.onGetRequestComplete);
+				//ms.getPhoto(this.userId_internal, "114491", this.onGetRequestComplete);
+				//ms.getFriendsStatus(this.userId_internal, this.onGetRequestComplete);
+				//ms.getVideos(this.userId_internal, this.onGetRequestComplete);
+				//ms.getVideo(this.userId_internal, "55493583", this.onGetRequestComplete);
+				//ms.getFriendship(this.userId_internal, "40730983;94237623;2557776", this.onGetRequestComplete);
+				//ms.getIndicators(this.userId_internal, this.onGetRequestComplete);
+				//ms.getFriendsActivitiesAtom(this.userId_internal, this.onGetRequestComplete);
+				//testPutAppData();
+				//ms.getAppData(this.userId_internal, this.onGetRequestComplete);
+				//ms.getGlobalAppData(this.onGetRequestComplete);
+				//testPutGlobalAppData();
+				//ms.clearAppData(userId_internal, "job;animal");
+				//ms.getUserFriendsAppData(this.userId_internal, this.onGetRequestComplete);
+				
+				//ms.getRequestToken(onRequestCompleteRequestToken);
+				//testGetAccessToken();
+				//ms.getFriends(this.userId_internal, this.onGetRequestComplete);
+				//ms.getFriendsList(this.userId_internal, this.onGetRequestComplete, "40730983;94237623;2557776");
+				
+			}
+			
+			public function dataNavigationClickHandler(event:Event):void
+			{
+				
+			}
+			
+			public function getFriends ():void
+			{
+				ms.getFriends(this.userId_internal, this.onGetFriendsRequestComplete);
+			}
+			
+			public function testGetAccessToken ():void
+			{
+				//paste in the request token raw string to create request token
+				var newToken:OAuthToken = new OAuthToken("","","oauth_token=bnZqhFkFHwdgUXAZuUYYGyWehUfxwTWMBRbaSJTlQwm2Uhqi0yCsHzDhv1tYHZOTwKhIJwlqGWW9oObmC6OuKA%3D%3D&oauth_token_secret=c11ef33f3c94405582a39b48d5f1d029");
+				ms.getAccessToken(newToken, onRequestCompleteAccessToken);
+			}
+			
+			public function testPutAppData():void
+			{
+				//test putAppData
+				var appParams:Object = new Object();
+				appParams["car"] = "Dodge";
+				appParams["job"] = "builder";
+				appParams["animal"] = "rat";
+				ms.putAppData(this.userId_internal, appParams, this.onPutRequestComplete);
+			}
+			
+			public function testPutGlobalAppData():void
+			{
+				//test putGlobalAppData
+				var appParams:Object = new Object();
+				appParams["car"] = "Porsche";
+				appParams["job"] = "driver";
+				appParams["animal"] = "dino";
+				ms.putGlobalAppData(appParams, this.onPutRequestComplete);
+			}
+		
+			public function getProfile ():void
+			{				
+				ms.getProfile(this.userId_internal, onGetProfileRequestComplete);				
+			}
+			
+			public function getActivities ():void
+			{
+				ms.getActivitiesAtom(this.userId_internal, onGetActivitiesRequestComplete);
+			}
+			
+			public function getStatus ():void
+			{
+				ms.getStatus(this.userId_internal, onGetStatusRequestComplete);
+				this.editStatusButton.visible = true;
+				this.profileStatusTitle.visible = true;
+			}
+			
+			public function getMood ():void
+			{
+				ms.getMood(this.userId_internal, onGetMoodRequestComplete);	
+			}
+			
+			public function getMoods ():void
+			{
+				this.moodDropDown.visible = true;
+				this.moodTitle.visible = true;
+				this.updateMoodButton.visible = true;
+				ms.getMoods(this.userId_internal, onGetMoodsRequestComplete);	
+			}
+			
+			public function onRequestCompleteRequestToken (response:String):void
+			{
+				//raw request token key and secret
+				trace(response);
+				/*
+					OAuthToken can either taken key(token)/secret values, 
+					or a raw response string, which it parses
+				*/
+				this.oAuthToken = new OAuthToken("","",response);
+				
+				var authURL:String = ms.getAuthorizationURL(this.oAuthToken,"http://localhost:8080/myspaceid-sample/oauth/oauth-demo.jsp?callback=true");
+				trace("Authorization URL: " + authURL);
+				
+				/*
+					now you need to copy/paste the Authorization URL into
+					a browser window and confirm (login or click continue)
+					
+					next, copy/paste the traced raw string of token/secret 
+					into the oAuthToken contructor in testGetAccessToken()
+					
+					now run testGetAccessToken()
+				*/
+			}
+		
+			public function onRequestCompleteAccessToken (response:String):void
+			{
+				trace("=================onRequestCompleteAccessToken===================");
+				trace(response);
+				/*
+					OAuthToken can either taken key(token)/secret values, 
+					or a raw response string, which it parses
+				*/
+				this.oAuthAccessToken = new OAuthToken("","",response);
+				ms2 = new MySpace(this.key_OFFSITE, this.secret_OFFSITE, true, this.oAuthAccessToken.key, this.oAuthAccessToken.secret);
+				ms2.getUserId(onRequestUserIdComplete);
+				ms2.getUser(onGetRequestComplete);
+			}
+			
+			public function onRequestUserIdComplete (retrievedUserId:String):void
+			{
+				trace("=================onRequestUserIdComplete===================");
+				trace("USER ID: " + retrievedUserId);
+			}
+		
+			public function onPutRequestComplete ():void
+			{
+				trace("=================onPutRequestComplete===================");
+			}
+			
+			public function onGetRequestComplete (xml:XML):void
+			{
+				trace("=================onGetRequestComplete===================");
+				trace(xml);
+			}
+			
+			public function onGetFriendsRequestComplete (xml:XML):void
+			{
+				trace("=================onGetFriendsRequestComplete===================");
+				
+				this.dataTextArea.htmlText = "Friends:<br><br>";
+				for each (var tempXML:XML in xml._xml_ns::friends.children())
+				{
+					this.dataTextArea.htmlText += "<a href='" + tempXML._xml_ns::weburi + "'>" + tempXML._xml_ns::displayname + "</a><br>";
+				}										
+				
+			}
+			
+			public function onGetMoodRequestComplete (xml:XML):void
+			{
+				trace("=================onGetMoodRequestComplete===================");
+
+				this._moodId = xml._xml_ns::moodId.toString();
+				if(!this._isMoodUpdating)
+				{
+					this.selectMood(this._moodId);
+					this.moodIcon.source = xml._xml_ns::moodimageurl;							
+				}
+			}
+			
+			private function selectMood (moodId:String):void
+			{
+				for(var x:Number = 0; x < this.moodDropDown.dataProvider.length; x++)
+				{
+					//select mood from drop down based on moodId
+					if(this.moodDropDown.dataProvider[x].data == moodId)
+					{	
+						this.moodDropDown.selectedIndex = x;
+					}
+				}
+			}
+			
+			public function onGetMoodsRequestComplete (xml:XML):void
+			{
+				trace("=================onGetMoodsRequestComplete===================");
+				//trace(xml);
+				
+				var dataArray:Array = new Array;
+				
+				for each (var tempXML:XML in xml.children())
+				{
+					var dataObject:Object = new Object();
+					
+					dataObject["data"] = tempXML.attribute("moodId");
+					dataObject["label"] = tempXML.attribute("moodName");
+					dataArray.push(dataObject);					
+				}	
+				
+				this.moodDropDown.dataProvider = dataArray;								
+			}
+			
+			public function onGetProfileRequestComplete (xml:XML):void
+			{
+				trace("=================onGetProfileRequestComplete===================");
+				//trace(xml);
+				
+				profilePhoto.source = xml._xml_ns::imageuri;
+				profileName.text = xml._xml_ns::displayname;
+				profileGender.text = xml._xml_ns::profile._xml_ns::gender;
+				profileLastUpdate.text = "Last update: " + xml._xml_ns::lastupdateddate;
+			}
+			
+			public function onGetActivitiesRequestComplete (xml:XML):void
+			{				
+				trace("=================onGetActivitiesRequestComplete===================");
+				
+				var w3_ns:Namespace = new Namespace("http://www.w3.org/2005/Atom");
+				
+				this.activitiesButton.visible = true;
+				this.dataTextArea.visible = true;
+				this.dataTextArea.htmlText = "Activities:<br><br>";
+				for each (var tempXML:XML in xml.children())
+				{
+					if(tempXML.name() == "http://www.w3.org/2005/Atom::entry")
+					{								
+						for each (var tempXML2:XML in tempXML.w3_ns::content.children().children())
+						{
+							if(tempXML2.name() == "http://www.w3.org/1999/xhtml::h5")
+								this.dataTextArea.htmlText += tempXML2.children().toString().split("\n").join(" ") + "<br><br>";
+						}
+					}
+				}								
+			}
+			
+			public function onGetStatusRequestComplete (xml:XML):void
+			{
+				trace("=================onGetStatusRequestComplete===================");
+				
+				this.profileStatus.text = xml._xml_ns::status.toString();				
+			}
+			
+			public function clearDisplay ():void
+			{
+				this.profileName.text = "";
+				this.profileGender.text = "";
+				this.profileLastUpdate.text = "";
+				this.profilePhoto.source = "";
+				this.dataTextArea.visible = false;
+				this.profileStatus.text = "";
+				this.profileStatusTitle.visible = false;
+				this.editStatusButton.visible = false;
+				this.saveStatusButton.visible = false;
+				this.newProfileStatus.visible = false;
+				this.moodDropDown.visible = false;
+				this.moodTitle.visible = false;
+				this.moodIcon.source = "";
+				this.updateMoodButton.visible = false;
+				this.activitiesButton.visible = false;
+				this.friendsButton.visible = false;
+			}
+			
+			public function editStatus ():void
+			{
+				this.profileStatus.visible = false;
+				this.newProfileStatus.visible = true;
+				this.newProfileStatus.text = this.profileStatus.text;
+				
+				this.editStatusButton.visible = false;
+				this.saveStatusButton.visible = true;
+				this.cancelStatusButton.visible = true;
+			}
+			
+			public function saveStatus (save:Boolean = true):void
+			{
+				this.saveStatusButton.visible = false;
+				this.cancelStatusButton.visible = false;
+				this.newProfileStatus.visible = false;
+				this.profileStatus.visible = true;
+				
+				if(save)
+					ms.setStatus(this.userId_internal, this.newProfileStatus.text, onSetStatusRequestComplete);
+				else
+				{
+					this.editStatusButton.visible = true;
+					this.profileStatusTitle.visible = true;
+				}
+			}
+			
+			public function onSetStatusRequestComplete ():void
+			{
+				trace("=================onSetStatusRequestComplete===================");
+				
+				_timerStatus = new Timer(500,5); //data is soemtimes updated at a delay; trye 5 times every 1/2 second
+				_timerStatus.addEventListener(TimerEvent.TIMER, statusListener);
+				_timerStatus.start();
+			}
+			
+			public function statusListener (e:TimerEvent):void
+			{
+				if(this.profileStatus.text != this.newProfileStatus.text)
+					this.getStatus();
+				else
+				{
+					_timerStatus.stop();
+				}
+			}	
+			
+			public function updateMood ():void
+			{	
+				//set the newly selected mood	
+				this._isMoodUpdating = true;	
+				var newMoodId:Number = Number(this.moodDropDown.dataProvider[this.moodDropDown.selectedIndex].data);
+				ms.setMood(this.userId_internal, newMoodId, onSetMoodRequestComplete);
+				
+			}
+			
+			public function onSetMoodRequestComplete ():void
+			{
+				trace("=================onSetMoodRequestComplete===================");
+				
+				_timerMood = new Timer(1000,5); //data is soemtimes updated at a delay; trye 5 times every 1/2 second
+				_timerMood.addEventListener(TimerEvent.TIMER, moodListener);
+				_timerMood.start();
+			}
+			
+			public function moodListener (e:TimerEvent):void
+			{
+				trace(this._moodId);
+				trace(this.moodDropDown.dataProvider[this.moodDropDown.selectedIndex].data);
+				if(this._moodId != String(this.moodDropDown.dataProvider[this.moodDropDown.selectedIndex].data))
+					this.getMood();	//get user's current mood
+				else
+				{
+					this._isMoodUpdating = false;
+					_timerMood.stop();
+					this.getMood();
+				}
+			}
+						
+		]]>
+		
+	</mx:Script>
+	
+	<mx:Label x="10" y="10" text="MySpace UserID (FriendID): 12353591"/>	
+	<mx:Button x="442" y="8" label="Clear" id="clearDisplayButton" click="clearDisplay()"/>
+	<mx:Button x="290" y="8" label="Get User Information" id="getDataButton" click="getAll()"/>
+	<mx:Button id="editStatusButton" x="300" y="93" label="change status" click="editStatus()" visible="false"/>
+	<mx:Button id="saveStatusButton" x="300" y="93" label="save status" click="saveStatus()" visible="false"/>
+	<mx:Button id="cancelStatusButton" x="397" y="93" label="cancel" click="saveStatus(false)" visible="false"/>
+	
+	<mx:Label id="profileName" x="115" y="35" fontSize="15" fontWeight="bold" />
+	<mx:Label id="profileGender" x="115" y="55" fontSize="13" fontWeight="bold" />
+	<mx:Label id="profileLastUpdate" x="115" y="75" fontSize="12" fontWeight="normal" />
+	<mx:Label id="profileStatus" x="165" y="95" fontSize="12" fontWeight="normal" />
+	<mx:Label id="profileStatusTitle" x="115" y="95" fontSize="12" fontWeight="normal" text="Status: " visible="false" />
+	<mx:Image id="profilePhoto" x="10" y="35" />
+	
+	<mx:TextInput id="newProfileStatus" x="165" y="93" width="130" visible="false"/>
+	<mx:TextArea id="dataTextArea" x="115" y="180" fontSize="11" width="350" height="350" visible="false" borderThickness="2" borderColor="#333333" />
+	
+	<mx:ComboBox id="moodDropDown" x="176" y="117" width="120" visible="false" />
+	<mx:Label id="moodTitle" x="115" y="119" fontSize="12" fontWeight="normal" text="Mood: " visible="false" />
+	<mx:Image id="moodIcon" x="158" y="121" />
+	<mx:Button id="updateMoodButton" x="300" y="117" label="update mood" click="updateMood()" visible="false"/>
+	
+	<mx:Button id="activitiesButton" x="115" y="155" label="activities" click="getActivities()" visible="false"/>
+	<mx:Button id="friendsButton" x="200" y="155" label="friends" click="getFriends()" visible="false"/>
+</mx:WindowedApplication>

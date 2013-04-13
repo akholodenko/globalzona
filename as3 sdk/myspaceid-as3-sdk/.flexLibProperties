@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="com.myspace.sdk.oAuth.OAuthConsumer"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.NullReduction"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.HMAC"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.AESKey"/>
+<classEntry path="com.myspace.sdk.oAuth.IOAuthSignatureMethod"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.CBCMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.bi_internal"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.XTeaKey"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.SHABase"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.ICipher"/>
+<classEntry path="com.myspace.sdk.oAuth.OAuthSignatureMethod_HMAC_SHA1"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.IStreamCipher"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.der.OID"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.prng.IPRNG"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.der.ObjectIdentifier"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.CFBMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.MD2"/>
+<classEntry path="com.myspace.sdk.MySpaceID.MySpace"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.BlowFishKey"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.PKCS5"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.DESKey"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.IVMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.der.Sequence"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.IPad"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.Crypto"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.IReduction"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.der.DER"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.ECBMode"/>
+<classEntry path="com.myspace.sdk.MySpaceID.API_URL"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.prng.Random"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.CTRMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.ISymmetricKey"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.Memory"/>
+<classEntry path="com.myspace.sdk.MySpaceID.Message"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.IHash"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.prng.ARC4"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.TripleDESKey"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.IMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.ArrayUtil"/>
+<classEntry path="com.myspace.sdk.Utils.ObjectUtils"/>
+<classEntry path="com.myspace.sdk.Utils.URLEncoding"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.rsa.RSAKey"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.SimpleIVMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.CFB8Mode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.der.ByteString"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.MD5"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.Base64"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.NullPad"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.SHA224"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.Hex"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.BigInteger"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.MontgomeryReduction"/>
+<classEntry path="com.myspace.sdk.oAuth.OAuthToken"/>
+<classEntry path="com.myspace.sdk.oAuth.OAuthRequest"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.SHA1"/>
+<classEntry path="com.myspace.sdk.oAuth.OAuthSignatureMethod_PLAINTEXT"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.ClassicReduction"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.symmetric.OFBMode"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.util.der.Type"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.crypto.hash.SHA256"/>
+<classEntry path="com.myspace.sdk.oAuth.Hurlant.math.BarrettReduction"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

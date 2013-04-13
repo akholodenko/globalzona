@@ -1,0 +1,28 @@
+.porfolioHeader {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #FFFFFF;
+}
+
+.porfolioText {
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+
+}
+
+a {
+	color: #CCCCCC;
+}
+
+textarea, input, select {
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: 20px;
+	color: #000000;
+	font-weight: bold;
+}

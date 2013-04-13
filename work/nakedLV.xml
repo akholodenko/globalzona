@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+	<layoutType>boxLayout</layoutType>
+	<url>defaultLVAssets.swf</url>
+	<data>
+		<vbox style="width: 100%; height: 100%;">
+			<box style="width: 100%; height: 100%">
+				<media style="width: 100%; height: 100%; background-color: black" />
+			</box>
+		</vbox>
+	</data>
+</layout>

@@ -1,0 +1,1 @@
+<span>JobJuggler is a job application process management tool made by Artem Kholodenko starting from January, 2011.</span>

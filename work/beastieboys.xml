@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+	<layoutType>boxLayout</layoutType>
+	<url>beastieboys.swf</url>
+	<data> 
+
+<box style="width: 100%; height: 100%; background-color: white">
+	<img src="_montage" style="vertical-align: bottom" />
+	<box style="height: 1px; width: 50%; background-color: black; vertical-align: bottom" />
+
+<vbox style="width: 100%; height: 100%">
+	<box style="width: 100%">
+		<hbox style="width: 100%">
+			<box style="width: 50%">
+				<img src="_beastie" style="horizontal-align: center" />
+			</box>
+			<box style="width: 50%">
+				<img src="_boys" style="horizontal-align: center" />
+			</box>
+		</hbox>
+		<box style="width: 100%; height: 100%; overflow: hidden">
+			<img src="_voodoo" style="width: 50%; vertical-align: middle; horizontal-align: center; opacity: .03" />
+		</box>
+		<fullscreen style="horizontal-align: right; margin-right: 10px; margin-top: 5px">
+			<mouseup><img src="_fullscreenUp" /></mouseup>
+			<mouseover><img src="_fullscreenOver" /></mouseover>
+			<mousedown><img src="_fullscreenOver" /></mousedown>
+		</fullscreen>
+		<menu style="horizontal-align: right; vertical-align: bottom; margin-right: 10px">
+			<mouseup><html style="color: #24ed54; font-family: sans-serif;">menu</html></mouseup>
+			<mouseover><html style="color: #eaea6a; font-family: sans-serif;">menu</html></mouseover>
+			<mousedown><html style="color: #eaea6a; font-family: sans-serif;">menu</html></mousedown>
+		</menu>
+	</box>
+	<box style="width: 100%; height: 100%; padding: 0px 10px">
+		<media style="width: 100%; height: 100%; background-color: black" />
+	</box>
+	
+	<hbox style="width: 100%; padding: 0px 10px; margin-left: 50px">
+		<play style="margin-top: 3px; top: -6px">
+			<on>
+				<mouseup style="horizontal-align: center; vertical-align: middle"><img src="_pauseUp" /></mouseup>
+				<mouseover><img src="_pauseOver" style="width: 22px; height: 30px" /></mouseover>
+				<mousedown><img src="_pauseOver" style="width: 22px; height: 30px"/></mousedown>
+			</on>
+			<off>
+				<mouseup style="horizontal-align: center; vertical-align: middle"><img src="_playUp" /></mouseup>
+				<mouseover><img src="_playOver" style="width: 22px; height: 30px" /></mouseover>
+				<mousedown><img src="_playOver" style="width: 22px; height: 30px"/></mousedown>
+			</off>
+		</play>
+		
+		<mediascrubber style="width: 100%; margin-top: 3px">
+			<box style="margin: 0px 10px; background-color: rgb(36, 237, 84); width: 100%; height: 8px; top: 1px" />
+			<current style="margin-left: 10px; width: 100%; height: 8px; top: 1px; background-color: rgb(234, 234, 106)" />
+			<hbox style="margin: 0px 10px; width: 100%">
+				<box style="width: 50%"><img src="_left" /></box>
+				<box style="width: 50%"><img src="_right" style="horizontal-align: right" /></box>
+			</hbox>
+			
+			<handle>
+				<mouseup style="horizontal-align: center"><img src="_handleUp" /></mouseup>
+				<mouseover><img src="_handleOver" /></mouseover>
+				<mousedown><img src="_handleOver" /></mousedown>
+			</handle>
+		</mediascrubber>
+		
+		<volume duration=".4">
+			<volumescrubber direction="vertical" style="left: 2px">
+				<box style="background-color: rgb(36, 237, 84); width: 100%; height: 100%" />
+				<current style="background-color: rgb(234, 234, 106); width: 100%; height: 100%" />
+				<handle style="height: 0px width: 100%" />
+				<img src="_volume" />
+			</volumescrubber>
+			<mute>
+				<on style="padding-top: 3px">
+					<mouseup><img src="_muteUp" /></mouseup>
+					<mouseover><img src="_muteOver" /></mouseover>
+					<mousedown><img src="_muteOver" /></mousedown>
+					<img src="_no" />
+				</on>
+				<off style="padding-top: 3px">
+					<mouseup><img src="_muteUp" /></mouseup>
+					<mouseover><img src="_muteOver" /></mouseover>
+					<mousedown><img src="_muteOver" /></mousedown>
+					<img src="_sound" style="margin-left: 15px" />
+				</off>
+			</mute>
+		</volume>
+	</hbox>
+	<hbox style="horizontal-align: right">
+		<html scrolling="vertical" style="vertical-align: bottom; height: 20px; color: green; border: 2px green; font-family: sans-serif; background-color: 0xcccccc; opacity: .6; margin: 5px">BUY THE ALBUM JUNE 15th!</html>
+		<img src="_theMixUp" style="horizontal-align: right" />
+	</hbox>
+</vbox>
+
+</box>
+	
+	</data>
+</layout> 

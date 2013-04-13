@@ -1,0 +1,11 @@
+.ui-header .ui-title, .ui-footer .ui-title { font-size: 16px; text-align: center; margin: 0.6em auto; }
+
+.tile_row { margin-top: 5px;}
+
+.tile { width: 50%; height: 125px; float: left; position: relative; }
+.tile.first { margin-left: -5px; }
+.tile.second { margin: 0px -10px 0px 10px; }
+.tile .body { background-color: #9999FF; width: 100%; height: 100%; border-top: 5px solid #DDD;
+border-right: 3px solid #AAA; }
+
+.tile .text_label { position: absolute; font-weight: bold; right: 10px; bottom: 10px; }

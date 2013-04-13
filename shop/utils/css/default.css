@@ -1,0 +1,198 @@
+#demotip { 
+    display:none; 
+    background:transparent url(http://globalzona.com/shop/utils/img/tooltip/black.png); 
+    font-size:13px; 
+	font-family: Arial;
+    height: 57px; 
+    width: 160px; 
+    padding:25px; 
+    color:#fff; 	
+}
+
+#tooltip
+{
+	position: absolute;
+/*	
+	border: 1px solid #333;
+	background: #f7f5d1;
+	color:#333;
+*/
+
+	color:#333;
+	border: 1px solid #88ACE0;
+	background: #CAE1FF;
+
+	padding: 5px 8px;	
+	display: none;
+
+	font-family: Tahoma;
+	font-size: 11px;
+
+	width: 125px;
+	text-align: justify;
+}
+
+body
+{
+	background-color: #eeeeee;
+}
+
+.navigation
+{
+	font-size: 12px;
+	font-family: Tahoma;
+	background-color: #dddddd;
+
+	padding: 5px 5px 5px 5px;
+}
+
+.navigation ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.navigation li
+{
+	display: inline;
+}
+
+#body
+{
+	font-size: 12px;
+	font-family: Tahoma;
+}
+
+#main
+{
+	margin-left: 13em;
+	margin-right: 21em;
+	padding-top: 15px;
+}
+
+#main_content
+{
+	background-color: #ffffff;
+}
+
+.item_preview_panel
+{
+	padding-bottom: 10px;
+}
+
+.item_preview_img
+{
+	float: left; 
+	background-color: #ffffff;
+	padding: 5px;
+
+	border: 2px solid #dddddd;
+}
+
+.item_preview_body
+{
+	padding-top: 5px;
+}
+
+.item_preview_name
+{
+	font-size: 13px;
+	font-weight: bold;
+
+	text-decoration: none;
+
+	color: #333333;
+}
+
+#shopping_cart_panel
+{
+	/*
+	position: fixed;
+	left: auto;
+	right: 0em;
+	*/
+	font-size: 14px;
+	font-family: Tahoma;
+
+	position:relative;
+	width: 15em; 
+	float: right; 
+	border: 2px solid #88ACE0;
+	background-color: #CAE1FF;
+
+	/*text-align: center;*/
+	padding: 10px 10px 10px 10px;
+	margin: 10px 10px 0px 5px;
+}
+
+#shopping_cart
+{
+	width: 100%;
+}
+
+#shopping_cart_details_item_count
+{
+	float: right;
+	margin: 15px 4px 0px 0px;
+
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#categories
+{
+	position:absolute;
+	float: left;
+
+	width: 12em;
+	border-right: 1px solid #000;
+	padding: 0 0 1em 0;
+	margin-bottom: 1em;
+	font-family: 'Trebuchet MS', 'Lucida Grande',
+	  Verdana, Lucida, Geneva, Helvetica, 
+	  Arial, sans-serif;
+	background-color: #90bade;
+	color: #333;
+
+}
+
+#categories ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#categories ul li
+{
+	border-bottom: 1px solid #90bade;
+	margin: 0;
+}
+
+#categories li a 
+{
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 10px solid #1958b7;
+	border-right: 10px solid #508fc4;
+	background-color: #2175bc;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+}
+
+html>body #categories li a 
+{
+	width: auto;
+}
+
+#categories li a:hover 
+{
+	border-left: 10px solid #1c64d1;
+	border-right: 10px solid #5ba3e0;
+	background-color: #2586d7;
+	color: #fff;
+}

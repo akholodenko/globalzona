@@ -1,0 +1,45 @@
+<?
+	$vip = Data::GetVIPById($_GET['vip_id']);	
+
+	echo "<table width='100%' border='0' cellpadding='2' cellspacing='2'>";
+	echo "	<form action='process/process_vip_edit.php' method='POST'>";
+	echo "	<input type='hidden' name='vip_id' value='".$vip['id']."'>";
+	echo "	<tr class='text_body' style='font-weight: bold'>";
+	echo "		<td colspan='2'>Edit VIP</td>";
+	echo "	</tr>";
+	echo "	<tr>";
+	echo "		<td colspan='2'><hr style='color: #9dca3a;' noshade size='1'></td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td width='110'>First Name:</td>";
+	echo "		<td>";
+					Form::Input('first_name', 'first_name', 'form', 'width: 400px;', stripslashes(urldecode($vip['first_name'])));
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td>Last Name:</td>";
+	echo "		<td>";
+					Form::Input('last_name', 'last_name', 'form', 'width: 400px;', stripslashes(urldecode($vip['last_name'])));
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td width='100'>Email:</td>";
+	echo "		<td>";
+					Form::Input('email', 'email', 'form', 'width: 400px;', stripslashes(urldecode($vip['email'])));
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td>Phone: (optional)</td>";
+	echo "		<td>";
+					Form::Input('phone', 'phone', 'form', 'width: 400px;', stripslashes(urldecode($vip['phone'])));
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td>&nbsp;</td>";
+	echo "		<td>";
+					Form::ButtonSubmit('submitButton', 'submitButton', '', '', 'submit', '');
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	</form>";
+	echo "</table>";
+?>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+	<layoutType>boxLayout</layoutType>
+	<url>defaultLVAssets.swf</url>
+	<data> 
+	
+<vbox style="width: 100%; height: 100%;">
+	<box style="width: 100%; height: 100%">
+		<media style="width: 100%; height: 100%; background-color: black" />
+		<throbber style="width: 100%; height: 100%;"><img style="horizontal-align: center; vertical-align: middle;" src="throbber" /></throbber>
+		<img src="watermark" style="horizontal-align: right; vertical-align: bottom; margin: 0px 25px 12px 0px" />
+	</box>
+	<box style="width: 100%; height: 100%">
+		<box style="width: 100%"><img src="background" style="width: 100%; color: primary-color"/></box>
+		<hbox style="width: 100%; height: 100%">
+
+<hbox style="width: 100%; height: 100%">
+	<hbox style="margin-left: 10px; vertical-align: middle; color: secondary-color">
+		<low>
+			<on>
+				<mouseup><img src="bitrateLowDown" /></mouseup>
+				<mousedown><img src="bitrateLowDown" /></mousedown>
+				<mouseover><img src="bitrateLowDown" /></mouseover>
+			</on>
+			<off>
+				<mouseup><img src="bitrateLowUp" /></mouseup>
+				<mousedown><img src="bitrateLowUp" /></mousedown>
+				<mouseover><img src="bitrateLowUp" /></mouseover>
+			</off>
+		</low>
+		<medium>
+			<on>
+				<mouseup><img src="bitrateMedDown" /></mouseup>
+				<mousedown><img src="bitrateMedDown" /></mousedown>
+				<mouseover><img src="bitrateMedDown" /></mouseover>
+			</on>
+			<off>
+				<mouseup><img src="bitrateMedUp" /></mouseup>
+				<mousedown><img src="bitrateMedUp" /></mousedown>
+				<mouseover><img src="bitrateMedUp" /></mouseover>
+			</off>
+		</medium>
+		<high>
+			<on>
+				<mouseup><img src="bitrateHighDown" /></mouseup>
+				<mousedown><img src="bitrateHighDown" /></mousedown>
+				<mouseover><img src="bitrateHighDown" /></mouseover>
+			</on>
+			<off>
+				<mouseup><img src="bitrateHighUp" /></mouseup>
+				<mousedown><img src="bitrateHighUp" /></mousedown>
+				<mouseover><img src="bitrateHighUp" /></mouseover>
+			</off>
+		</high>
+	</hbox>
+
+	<html scrolling="horizontal" speed="30" style="margin: 0px 10px; vertical-align: middle; width: 100%; overflow-x: hidden; color: white; font-family: sans-serif; font-size: 11px; background-color: black; text-indent: 20px">
+		#{STREAM_NAME}               Frames per second - #{FPS}, Buffer time - #{BUFFER}
+	</html>
+</hbox>
+
+<hbox style="width: 0%; margin-right: 8px">
+
+	<hbox style="padding-top: 8px">
+		<volume duration=".2" >
+			<box style="margin-left: 4px; overflow-y: hidden; height: 110px;">
+				<img src="volumeBack" style="color: primary-color" />
+				<volumescrubber direction="vertical" style="width: 100%">
+					<img src="volumeBar" style="horizontal-align: center; margin-top: 10px" />
+					<handle style="horizontal-align: center; margin-top: 10px"><img src="dot" /></handle>
+					<current style="horizontal-align: center; vertical-align: bottom; color: secondary-color"><img src="volumeLevel" /></current>
+				</volumescrubber>
+			</box>
+		
+			<mute style="color: secondary-color">
+				<on>
+					<mouseup><img src="muteUp" /></mouseup>
+					<mousedown><img src="muteOver" /></mousedown>
+					<mouseover><img src="muteOver" /></mouseover>
+				</on>
+				<off>
+					<mouseup><img src="vol3Up" /></mouseup>
+					<mousedown><img src="vol3Over" /></mousedown>
+					<mouseover><img src="vol3Over" /></mouseover>
+				</off>
+			</mute>
+		</volume>
+		<fullscreen style="color: secondary-color">
+			<mouseup><img src="fullscreenUp" /></mouseup>
+			<mousedown><img src="fullscreenOver" /></mousedown>
+			<mouseover><img src="fullscreenOver" /></mouseover>
+		</fullscreen>
+	</hbox>
+</hbox>
+			
+		</hbox>
+	</box>
+</vbox>
+	
+	</data>
+</layout> 

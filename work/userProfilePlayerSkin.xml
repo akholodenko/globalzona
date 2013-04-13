@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout>
+	<layoutType>boxLayout</layoutType>
+	<url>MusicAssets.swf</url>
+	<data>
+		<vbox style="width: 100%; height: 100%; background-color: white">
+		
+		
+			<!-- PLAYER -->
+			<box style="width: 100%">
+
+				<!-- PLAYER BACKGROUND -->
+				<box style="width: 100%; height: 100%">
+					<img src="playerBackgroundFlex" style="width: 100%; height: 100%; margin: 0px 15px"/>
+					<img src="playerBackgroundLf" style="width: 22px; height: 100%; horizontal-align: left"/>
+					<img src="playerBackgroundRight" style="width: 22px; height: 100%; horizontal-align: right"/>
+				</box>
+				<!-- END PLAYER BACKGROUND -->
+
+				<!-- OUTER LAYOUT -->
+				<vbox style="width: 100%; height: 100%">
+
+					<!--  TOP BAR -->
+					<hbox style="width: 100%; height: 28px; margin-left: 7px; top: 1px">
+	
+	<!-- BUY BUTTON -->
+	<buy style="margin-top: 5px">
+		<mouseup style="width: 100%">
+			<img src="buyFlexOff" style="width: 100%; height: 20px; margin: 0px 2px"/>
+			<img src="buyLeftOff" style="width: 4px; height: 20px; horizontal-align: left"/>
+			<img src="buyRightUp" style="width: 4px; height: 20px; horizontal-align: right"/>
+		</mouseup>
+		<mouseover style="width: 100%">
+			<img src="buyFlexOff" style="width: 100%; height: 20px; margin: 0px 2px"/>
+			<img src="buyLeftOff" style="width: 4px; height: 20px; horizontal-align: left"/>
+			<img src="buyRightUp" style="width: 4px; height: 20px; horizontal-align: right"/>
+		</mouseover>
+		<mousedown style="width: 100%">
+			<img src="buyFlexHover" style="width: 100%; height: 20px; margin: 0px 2px"/>
+			<img src="buyLeftHover" style="width: 4px; height: 20px; horizontal-align: left"/>
+			<img src="buyRightHover" style="width: 4px; height: 20px; horizontal-align: right"/>
+		</mousedown>
+		<html style="margin: 0px 7px; vertical-align: middle; font-family: Verdana; font-size: 9px; color: #333333; display: none">
+			<a href="#">#{PLAYBACK_BUY_ALBUM}</a>
+			<stylesheet>
+				a:hover { text-decoration: underline; }
+				a:active { text-decoration: underline; }
+			</stylesheet>
+		</html>
+	</buy>
+	<!--  END BUY BUTTON -->
+
+	<!-- RINGTONE BUTTON -->
+	<ringtone style="margin: 6px 0px 0px 10px">
+		<html style="font-family: Verdana; font-size: 9px; color: #4684c1; display: none">
+			<stylesheet>
+				a:hover { text-decoration: underline; }
+				a:active { text-decoration: underline; }
+			</stylesheet>
+			<a href="#">#{PLAYBACK_FIND_RINGTONES}</a> 
+		</html>	
+	</ringtone>
+	<html style="margin-top: 5px; font-family: Verdana; font-size: 11px; color: #4684c1;">></html>
+	<!--  END RINGTONE BUTTON -->
+
+						<box style="width: 100%; min-width: 15px; height: 100%" />
+
+	<!-- POPUP BUTTON -->
+	<popup style="margin: 6px 8px 0px 0px">
+		<img src="popout" style="margin: 2px 1px 0px 0px"/>
+		<html style="margin-left: 15px; font-family: Verdana; font-size: 9px; color: #4684c1; display: none">
+			<a href="#">#{PLAYBACK_PLAY_IN_POPUP}</a>
+			<stylesheet>
+				a:hover { text-decoration: underline; }
+				a:active { text-decoration: underline; }
+			</stylesheet>
+		</html>
+	</popup>
+	<!-- END POPUP BUTTON -->
+
+					</hbox>
+					<!-- END TOP BAR -->
+
+					<hbox style="width: 100%">
+
+						<!-- ALBUM -->
+						<art style="background-color: #333333; width: 63px; height: 63px; margin: 0px 8px 7px 7px" />
+						<!--  END ALBUM -->
+
+						<!-- INNER LAYOUT -->
+						<box style="width: 100%; height: 100%; margin: 0px 6px 5px 0px">
+
+							<!-- INNER LAYOUT BACKGROUND -->
+							<box style="width: 100%; height: 63px">
+
+								<img src="screenMid" style="width: 100%; height: 100%; margin: 0px 15px"/>
+								<img src="screenLeft" style="width: 17px; height: 100%; horizontal-align: left"/>
+								<img src="screenRight" style="width: 17px; height: 100%; horizontal-align: right"/>
+							</box>
+							<!-- END INNER LAYOUT BACKGROUND -->
+
+							<hbox style="width: 100%; height: 100%">
+
+								<!-- SECONDARY CONTROLS -->
+								<vbox style="width: 100%; height: 100%; margin: 5px 5px 5px 7px">
+
+									<!-- SCRUBBER -->
+									<hbox style="width: 100%">
+
+										<html style="color: #666666; font-family: sans-serif; font-size: 11px; vertical-align: middle">
+											#{PLAYHEAD_TIME}
+										</html>
+
+										<mediascrubber direction="horizontal" style="width: 100%; vertical-align: middle">
+											<handle style="top: -2px">
+												<mouseup>
+													<img src="scrubberOff" />
+												</mouseup>
+												<mouseover>
+													<img src="scrubberOff" />
+												</mouseover>
+												<mousedown>
+													<img src="scrubberDown" />
+												</mousedown>
+											</handle>
+											<box style="width: 100%; height: 5px; background-color: rgb(250, 250, 250); margin: 2px 0px" />
+											<current style="width: 100%; height: 5px; margin: 2px 0px">
+												<img src="yellowBar" style="width: 100%; height: 100%" />
+											</current>
+											<box style="width: 100%; height: 5px; border: 1px rgb(45, 60, 245, .5); margin: 1px 0px" />
+										</mediascrubber>
+										<html style="color: #333333; font-family: sans-serif; font-size: 11px; vertical-align: middle">
+											#{CURRENT_DURATION}
+										</html>
+
+									</hbox>
+									<!-- END SCRUBBER -->
+
+	<!-- METADATA -->
+	<html scrolling="horizontal" speed="12" pause="true" style="width: 100%; color: #222222; font-family: sans-serif; font-size: 11px; background-color: #b5c7db; text-indent: 30px">
+		<stylesheet>
+			a:hover { text-decoration: underline; }
+			a:active { text-decoration: underline; }
+			.bold { font-weight: bold; }
+			.italic { font-style: italic; }
+		</stylesheet>
+		<a href="#{AUTHOR_PROFILE}" TARGET="_self">#{CURRENT_SONG}</a>
+		-
+		<a class="bold" href="#{AUTHOR_PROFILE}" TARGET="_self">#{CURRENT_ARTIST}</a>
+		-
+		<a class="italic" href="#{AUTHOR_PROFILE}" TARGET="_self">#{CURRENT_ALBUM}</a>
+	</html>
+	<!-- END METADATA -->
+
+
+									<hbox style="horizontal-align: right; margin-top: 1px">
+
+										<!-- SHUFFLE -->
+										<shuffle style="vertical-align: middle; margin-right: 14px">
+											<on style="horizontal-align: center">
+												<img src="shuffleSelec" />
+												<img src="shuffle2Select" style="top: 1px; left: 2px" />
+											</on>
+											<off style="horizontal-align: center">
+												<mouseup>
+													<img src="shuffle2Off" style="top: 1px; left: 2px" />
+												</mouseup>
+												<mouseover>
+													<img src="shuffleHover" />
+													<img src="shuffle2Off" style="top: 1px; left: 2px" />
+												</mouseover>
+												<mousedown>
+													<img src="shuffleHover" />
+													<img src="shuffle2Off" style="top: 1px; left: 2px" />
+												</mousedown>
+											</off>
+										</shuffle>
+										<!-- END SHUFFLE -->
+
+										<!--  MUTE -->
+										<mute style="vertical-align: middle; margin-right: 4px">
+											<on>
+												<img src="volOff" />
+											</on>
+											<off>
+												<img src="volUp" />
+											</off>
+										</mute>
+										<!-- END MUTE -->
+
+										<!-- VOLUME -->
+										<volumescrubber style="vertical-align: middle">
+											<box style="overflow-y: hidden; height: 20px">
+												<img src="volumeGray" style="vertical-align: middle" />
+											</box>
+											<current style="overflow-y: hidden; height: 20px; top: 1px">
+												<img src="volumeYellow" style="vertical-align: middle" />
+											</current>
+										</volumescrubber>
+										<!-- END VOLUME -->
+
+									</hbox>
+								</vbox>
+								<!--  END SECONDARY CONTROLS -->
+
+								<img src="pipePlayerDiv" style="height: 100%; margin: 8px 0px" />
+
+								<!-- MAIN CONTROLS -->
+								<box style="height: 100%; padding: 4px">
+
+									<!-- PREVIOUS AND NEXT -->
+									<hbox style="horizontal-align: center; vertical-align: middle">
+										<previous>
+											<mouseup>
+												<img src="BackMedUpward" />
+												<img src="BackArrowMedLeftOff" style="top: 4px; left: 7px" />
+											</mouseup>
+											<mouseover>
+												<img src="BackMedUpward" />
+												<img src="BackArrowMedLeftHover" style="top: 4px; left: 7px" />
+											</mouseover>
+											<mousedown>
+												<img src="BackMedDown" />
+												<img src="BackArrowMedLeftHover" style="top: 4px; left: 7px" />
+											</mousedown>
+											<disabled>
+												<img src="BackMedUpward" />
+												<img src="BackArrowMedLeftDis" style="top: 4px; left: 7px" />
+											</disabled>
+										</previous>
+										<next>
+											<mouseup>
+												<img src="NextMedUpward" />
+												<img src="NextArrowMedRightUp" style="top: 4px; left: 19px" />
+											</mouseup>
+											<mouseover>
+												<img src="NextMedUpward" />
+												<img src="NextArrowMedRightOver" style="top: 4px; left: 19px" />
+											</mouseover>
+											<mousedown>
+												<img src="NextMedDown" />
+												<img src="NextArrowMedRightOver" style="top: 4px; left: 19px" />
+											</mousedown>
+											<disabled>
+												<img src="NextMedUpward" />
+												<img src="NextArrowMedRightDis" style="top: 4px; left: 19px" />
+											</disabled>
+										</next>
+									</hbox>
+									<!-- END PREVIOUS AND NEXT -->
+
+									<!-- PLAY -->
+									<play style="horizontal-align: center; vertical-align: middle">
+										<on>
+											<mouseup>
+												<img src="playMediumOff" />
+												<img src="PauseMedOff" style="top: 8px; left: 10px"/>
+											</mouseup>
+											<mouseover>
+												<img src="playMediumOff" />
+												<img src="PauseMedDown" style="top: 8px; left: 10px"/>
+											</mouseover>
+											<mousedown>
+												<img src="playMediumDown" />
+												<img src="PauseMedDown" style="top: 8px; left: 10px"/>
+											</mousedown>
+										</on>
+										<off>
+											<mouseup>
+												<img src="playMediumOff" />
+												<img src="PlayArrowMedOff" style="top: 7px; left: 11px"/>
+											</mouseup>
+											<mouseover>
+												<img src="playMediumOff" />
+												<img src="PlayArrowMedDown" style="top: 7px; left: 11px"/>
+											</mouseover>
+											<mousedown>
+												<img src="playMediumDown" />
+												<img src="PlayArrowMedDown" style="top: 7px; left: 11px"/>
+											</mousedown>
+										</off>
+									</play>
+									<!-- END PLAY -->
+
+								</box>
+								<!-- END MAIN CONTROLS -->
+
+							</hbox>
+
+						</box>
+						<!-- END INNER LAYOUT -->
+
+					</hbox>
+
+
+				</vbox>
+				<!-- END OUTER LAYOUT -->
+			</box>
+			<!-- END PLAYER -->
+
+			<!-- PLAYLIST -->
+			<vbox style="width: 100%; height: 100%; background-color: white; border: 1px #e0e0e0">
+				<hbox style="width: 100%; margin: 0px 6px">
+					<img src="pipeFeatherLeft" />
+					<img src="pipeFeatherFlexing" style="width: 100%" />
+					<img src="pipeFeatherRight" />
+				</hbox>
+				<box style="width: 100%">
+					<img src="titleGrad" style="width: 100%; height: 100%" />
+
+					<hbox style="width: 100%">
+						<box style="width: 38px; horizontal-align: center; vertical-align: middle;">
+							<hbox>
+				
+				<add style="vertical-align: middle; horizontal-align: center;">
+					<on>										
+						<img src="addBtn" style="margin-left: 5px; width: 10px; height: 10px; vertical-align: middle; horizontal-align: left;"/>
+						<html style="margin-left: 15px; color: #4684c1; font-family: Verdana; font-size: 10px; horizontal-align: center; display: none">
+							<a href="#">#{HEADER_ADD}</a>
+							<stylesheet>
+								a:hover { text-decoration: underline; }
+								a:active { text-decoration: underline; }
+							</stylesheet>
+						</html>			
+					</on>
+					<off>
+						<img src="BulletGrayColor" style="margin-left: 5px; width: 10px; height: 10px; vertical-align: middle; horizontal-align: left;"/>
+						<html style="margin-left: 15px; color: #888888; font-family: Verdana; font-size: 10px; horizontal-align: center;">
+							#{HEADER_ADD}
+						</html>				
+					</off>
+				</add>
+				
+							</hbox>
+						</box>
+						<box style="height: 100%; width: 1px; background-color: #cdcdcd; margin: 1px 0px" />
+						<box style="height: 100%; width: 1px; background-color: #ffffff; margin: 1px 0px" />
+						<box style="width: 100%; vertical-align: middle;">
+							<html style="color: #000000; font-family: Verdana; font-size: 10px; horizontal-align: left;  left: 12px; display: none">
+								<b>#{PLAYLIST}</b>
+							</html>
+						</box>
+
+						<box style="height: 100%; width: 18px;" />
+
+					</hbox>
+				</box>
+				<box style="height: 1px; width: 100%; background-color: #d8d8d8" />
+
+				<!-- TRACK LIST -->
+				<scrollwindow style="width: 100%; height: 100%" direction="vertical">
+					<scrollcontent style="width: 100%; height: 100%" orientation="vertical">
+
+						<!-- ONE TRACK START -->
+
+						<!-- ONE TRACK START -->
+						<tracktemplate style="width: 100%; min-height: 25px;">
+							<on style="width: 100%; height: 100%; background-color: #EFF4FA;">
+								<img src="CheckboxNotCheck" style="color: #EFF4FA; top: 10px; left: 15px" />
+								<img src="CheckboxSelect" style="top: 10px; left: 16px" />
+							</on>
+							<off>
+								<img src="CheckboxNotCheck" style="top: 10px; left: 15px;" />
+							</off>
+
+							<hbox style="width: 100%; height: 100%; margin-right: 17px">
+								<!-- Check Box -->
+								<box style="width: 40px"/>
+
+								<!-- Column Divider -->
+								<box style="height: 100%; width: 1px; background-color: #e0e0e0; margin-right: 1px" />
+
+								<!-- Track Title -->
+								<vbox style="width: 100%; overflow-x: hidden; margin-top: 5px; padding-bottom: 1px">
+				
+				<play>
+					<on orientation="horizontal">
+						<html style="font-family: Verdana; font-size: 10px; padding-left: 5px; font-weight: bold;">
+							#{TRACK_NUMBER}. <span><t maxlength="18">#{TRACK_TITLE}</t></span>
+						</html>
+						<img src="SpeakerTrackOn" style="margin-left: 5px; vertical-align: middle"/>
+					</on>
+					<off>
+						<html style="color: #333333; font-family: Verdana; font-size: 10px; padding-left: 5px">
+							#{TRACK_NUMBER}. <a href="#"><t maxlength="18">#{TRACK_TITLE}</t></a>
+							<stylesheet>
+								a:hover { text-decoration: underline; }
+								a:active { text-decoration: underline; }
+							</stylesheet>
+						</html>
+					</off>
+				</play>
+				<html style="margin-left: 30px; font-family: Verdana; font-size: 9px; color: #4684c1">
+					#{TRACK_ARTIST_NAME}
+				</html>
+				
+				<html style="margin-left: 30px; top: -1px; font-family: Verdana; font-size: 9px; color: #990000; display: none">
+					<span class="explicit">#{EXPLICIT}</span> 
+					<span class="divider">#{EXPLICIT_SAMPLE_DIVIDER}</span> 
+					<span class="sample">#{SAMPLE}</span>
+					<stylesheet>
+						.explicit { color: #990000; }
+						.divider { color: #999999; }
+						.sample { color: #999999; }
+					</stylesheet>
+				</html>
+								
+								</vbox>
+
+								<!-- Column Divider -->
+								<box style="height: 100%; width: 1px; background-color: #e0e0e0; margin-right: 1px" />
+
+								<!-- Download/Buy -->
+								<box style="width: 68px; height: 100%; vertical-align: middle;">
+			
+			<download style="vertical-align: middle; horizontal-align: center;">
+			  	<img src="dwnloadOff" style="vertical-align: middle"/>
+				<html style="margin-left: 7px; color: #003399; font-family: Verdana; font-size: 10px; vertical-align: middle; dispay: none">
+			     	<a href="#">#{FREE}</a>
+			      	<stylesheet>
+						a:hover { text-decoration: underline; }
+						a:active { text-decoration: underline; }
+					</stylesheet>
+				</html>    	
+			</download>
+			
+			<!-- BUY BUTTON -->
+			<buysong style="vertical-align: middle; margin: 2px 0px 2px 0px; padding: 1px">
+				<img src="buyFlexOff" style="width: 100%; height: 19px; margin: 0px 2px"/>
+				<img src="buyLeftOff" style="width: 4px; height: 19px; horizontal-align: left"/>
+				<img src="buyRightUp" style="width: 4px; height: 19px; horizontal-align: right"/>
+				<img src="iconAmazon" style="margin-left: 3px; margin-top: 3px;"/>
+				<html style="margin-left: 16px; vertical-align: middle; font-family: Verdana; font-size: 9px; color: #333333; display: none">
+					<a href="#">#{BUY}</a>
+			      	<stylesheet>
+						a:hover { text-decoration: underline; }
+						a:active { text-decoration: underline; }
+					</stylesheet>
+				</html>
+			</buysong>
+			
+								</box>
+
+							</hbox>
+							<box style="width: 100%; height: 1px; background-color: #e0e0e0" />
+						</tracktemplate>
+						<!--<box style="width: 100%; height: 1px; background-color: #e0e0e0" />-->
+
+					</scrollcontent>
+
+					<!-- SCROLLING CONTROLS -->
+					<vbox style="horizontal-align: right; height: 100%; background-color: white; padding: 3px">
+						<scrollbutton direction="up">
+							<img src="scrollArrowUpward" />
+						</scrollbutton>
+
+						<scrollbar style="height: 100%" direction="vertical">
+							<img src="scrollBackground" style="height: 100%" />
+							<handle style="height: 50%; min-height: 10px">
+								<vbox style="height: 100%">
+									<img src="scrollScrubTop" />
+									<img src="scrollScrubMid" style="height: 100%" />
+									<img src="scrollScrubBtm" />
+								</vbox>
+							</handle>
+						</scrollbar>
+
+						<scrollbutton direction="down">
+							<img src="scrollArrowDown" />
+						</scrollbutton>
+
+					</vbox>
+					<!-- END SCROLLING CONTROLS -->
+
+				</scrollwindow>
+				<!-- END TRACK LIST -->
+
+			</vbox>
+			<!--  END PLAYLIST -->
+
+			<!--	<box style="height: 1px; width: 100%; background-color: #e0e0e0" />  -->
+
+			<!-- Share More Music With Friends -->
+			<vbox style="width: 100%; border: 1px #e0e0e0">
+				<box style="width: 100%; overflow-x: hidden; background-color: #f4f4f4;">
+					<img src="titleGrad" style="width: 100%; height: 100%" />
+					<!--<box style="background-color: #f4f4f4; width: 100%; height: 1px; vertical-align: bottom" /> -->
+
+					<hbox style="height: 35px; top: 1px; left: 12px">
+						<html style="color: #333333; font-family: Verdana; font-size: 10px; vertical-align: middle">
+							#{SHARE_MORE_MUSIC_WITH_FRIENDS}
+						</html>
+
+						<!-- CREATE PLAYLIST  BUTTON -->
+						<createplaylist style="vertical-align: middle; margin-left: 10px">
+							<img src="buttonBlueFlexing" style="width: 100%; height: 17px; margin: 0px 2px"/>
+							<img src="btnBlueLeft" style="width: 4px; height: 17px; horizontal-align: left"/>
+							<img src="btnBlueRight" style="width: 4px; height: 17px; horizontal-align: right"/>
+							<html style="margin: 0px 7px; vertical-align: middle; font-family: Verdana; font-size: 10px; color: #333333; display: none">
+								<a href="#">#{CREATE_PLAYLIST}</a>
+								<stylesheet>
+									a:hover { text-decoration: underline; }
+									a:active { text-decoration: underline; }
+								</stylesheet>
+							</html>
+						</createplaylist>
+						<!--  END CREATE PLAYLIST  BUTTON -->
+					</hbox>
+				</box>
+					
+				<!-- End Share More Music With Friends Tab-->
+			
+
+				<box style="height: 1px; width: 100%; background-color: #e0e0e0" />
+
+				<!-- FOOTER -->
+				<box style="width: 100%; background-color: #eaeaea">
+					<html style="color: #aeaeae; font-family: Verdana; font-size: 10px; horizontal-align: right; padding: 0px 2px">
+						#{ALBUMS_MP3_FROM_AMAZON}
+					</html>
+				</box>
+				<!-- END FOOTER -->
+				
+			</vbox>
+			<!-- BOTTOM PLAYER BORDER	-->
+			<box style="height: 1px; width: 100%; background-color: #aeaeae" />
+
+		</vbox>
+
+	</data>
+</layout>

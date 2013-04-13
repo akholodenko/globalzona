@@ -1,0 +1,69 @@
+.text_header
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.text_header a
+{
+	color: orange;
+}
+
+.text_body
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 12px;
+}
+
+.text_body a
+{
+	color: orange;
+}
+
+.text_message
+{
+	font-family: Tahoma;
+	color: orange;
+	font-size: 12px;
+}
+
+.text_nav
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+}
+
+.text_nav a
+{
+	color: black;
+}
+
+.form
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 12px;
+	background-color: #333333;
+	border: 1px solid #9dca3a;
+	width: 150px;
+}
+
+.formButton
+{
+	font-family: Tahoma;
+	color: #9dca3a;
+	font-size: 12px;
+	background-color: #22231e;
+	border: 1px solid #777777;
+	width: 100px;
+}
+
+body
+{
+	background:#111 url(http://www.addictionsf.com/images/bg_glow.jpg) fixed top center;
+}

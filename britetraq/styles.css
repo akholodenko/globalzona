@@ -1,0 +1,23 @@
+.navbar {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	letter-spacing: 1pt;
+	word-spacing: 2pt;
+	line-height: 15px;
+}
+
+.infotitle {
+	font-family: Tahoma;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	letter-spacing: 1pt;
+	word-spacing: 2pt;
+	line-height: 25px;
+}

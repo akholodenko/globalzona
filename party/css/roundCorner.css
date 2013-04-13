@@ -1,0 +1,193 @@
+.roundCorner{display:block}
+.roundCorner *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#333333}
+.roundCorner1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #494949;
+  border-right:1px solid #494949;
+  background:#3d3d3d}
+.roundCorner2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #575757;
+  border-right:1px solid #575757;
+  background:#3a3a3a}
+.roundCorner3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #3a3a3a;
+  border-right:1px solid #3a3a3a;}
+.roundCorner4{
+  border-left:1px solid #494949;
+  border-right:1px solid #494949}
+.roundCorner5{
+  border-left:1px solid #3d3d3d;
+  border-right:1px solid #3d3d3d}
+.roundCornerfg{
+  background:#333333}
+  
+  
+  
+  
+ .roundCornerA{display:block}
+.roundCornerA *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#FFCF7B;
+   background-image: url(../images/gradientOrange.jpg);
+ }
+.roundCornerA1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #ffeac6;
+  border-right:1px solid #ffeac6;
+  background:#ffdb9c}
+.roundCornerA2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #fffaf1;
+  border-right:1px solid #fffaf1;
+  background:#ffd894}
+.roundCornerA3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #ffd894;
+  border-right:1px solid #ffd894;}
+.roundCornerA4{
+  border-left:1px solid #ffeac6;
+  border-right:1px solid #ffeac6}
+.roundCornerA5{
+  border-left:1px solid #ffdb9c;
+  border-right:1px solid #ffdb9c}
+.roundCornerAfg{
+  background:#FFCF7B}
+
+
+//-----------------------------------
+
+  .roundCornerOrange{display:block}
+.roundCornerOrange *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#E7510B}
+.roundCornerOrange1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #803f21;
+  border-right:1px solid #803f21;
+  background:#ba4915}
+.roundCornerOrange2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #45362f;
+  border-right:1px solid #45362f;
+  background:#c44b12}
+.roundCornerOrange3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #c44b12;
+  border-right:1px solid #c44b12;}
+.roundCornerOrange4{
+  border-left:1px solid #803f21;
+  border-right:1px solid #803f21}
+.roundCornerOrange5{
+  border-left:1px solid #ba4915;
+  border-right:1px solid #ba4915}
+.roundCornerOrangefg{
+  background:#E7510B}
+
+ //------------------------------------
+ .roundCornerDark{display:block}
+.roundCornerDark *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#222222}
+.roundCornerDark1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #2b2b2b;
+  border-right:1px solid #2b2b2b;
+  background:#262626}
+.roundCornerDark2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #313131;
+  border-right:1px solid #313131;
+  background:#252525}
+.roundCornerDark3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #252525;
+  border-right:1px solid #252525;}
+.roundCornerDark4{
+  border-left:1px solid #2b2b2b;
+  border-right:1px solid #2b2b2b}
+.roundCornerDark5{
+  border-left:1px solid #262626;
+  border-right:1px solid #262626}
+.roundCornerDarkfg{
+  background:#222222}
+
+  .roundCornerSub2{display:block}
+.roundCornerSub2 *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#666666}
+.roundCornerSub21{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #3f3f3f;
+  border-right:1px solid #3f3f3f;
+  background:#555555}
+.roundCornerSub22{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #282828;
+  border-right:1px solid #282828;
+  background:#595959}
+.roundCornerSub23{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #595959;
+  border-right:1px solid #595959;}
+.roundCornerSub24{
+  border-left:1px solid #3f3f3f;
+  border-right:1px solid #3f3f3f}
+.roundCornerSub25{
+  border-left:1px solid #555555;
+  border-right:1px solid #555555}
+.roundCornerSub2fg{
+  background:#666666}

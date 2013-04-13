@@ -1,0 +1,81 @@
+body
+{
+	font-family: Tahoma;
+	font-size: 12px;
+}
+
+#flashMessage
+{
+	color: yellow;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background-color: red;
+	height: 25px;
+	padding-top: 5px;
+}
+
+#menu
+{
+	background-color: #cccccc;
+	padding: 5px;
+}
+
+#menu a
+{
+	color: black;
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+#menu span
+{
+	padding: 0px 5px 0px 5px;
+	border-right: 1px solid black;
+	text-align: center;
+}
+
+#venues_view_image
+{
+	margin: 10px 10px 0px 10px;
+}
+
+#venues_view_title
+{
+	width: 100%;
+	font-size: 15px;
+	font-weight: bold;
+
+	padding: 15px 0px 7px 0px;
+	border-bottom: 1px dashed black;
+}
+
+#venues_view_edit_link
+{
+	padding-left: 10px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#venues_view_address
+{
+	padding-top: 10px;
+}
+
+#venues_view_website
+{
+	padding-top: 5px;
+}
+
+#venues_view_text
+{
+	padding-top: 15px;
+}
+
+.input input
+{
+	font-family: Tahoma;
+	color: black;
+	font-size: 12px;
+}

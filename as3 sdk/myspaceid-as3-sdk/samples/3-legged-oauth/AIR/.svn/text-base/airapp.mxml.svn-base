@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication width="500" height="600" title="MySpaceID AIR Demo App" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+	<mx:Script>
+		<![CDATA[
+			import com.myspace.sdk.MySpaceID.MySpace;
+			import com.myspace.sdk.Utils.URLEncoding;
+			import com.myspace.sdk.oAuth.*;		
+			
+			import mx.core.Window;
+			
+			// -------------------- BEGIN - CHANGE THESE TO SUIT YOU ENVIRONMENT -----------------------------
+			//
+	       	private var CONSUMER_KEY:String = "YOUR_CONSUMER_KEY_HERE"; // INSERT YOUR OFFSITE APP'S CONSUMER KEY HERE
+	       	private var CONSUMER_SECRET:String = "YOUR_CONSUMER_SECRET_HERE"; // INSERT YOUR OFSITE APP'S CONSUMER SECRET HERE
+	       	
+	       	// This can be any URL since all we care about are the query params attached to the callback
+	       	// on the desktop client side. This can also be a working URL if you have server side infrastrucrure 
+	       	// to which the callback will be sent to.
+	       	// In either case, the domain of the URL given below MUST match the one specified during the app creation 
+	       	// process on developer.myspace.com
+	       	//
+	       	private var oauthCallbackURL:String = "http://chak.myspace.com/callback"; 
+	       		
+			//
+			// ---------------------- END -----------------------------
+
+			private var _xml_ns:Namespace = new Namespace("api-v1.myspace.com");
+
+			private var ms:MySpace; // Used to make the initial request token request, to get the authorization url and the access token	
+			private var msAuthorized:MySpace; // Used for REST API calls *after* we get the access token
+	
+	       	private var userid:String;
+			private var oAuthRequestToken:OAuthToken;
+			private var oAuthAccessToken:OAuthToken;
+			
+			private var authPopupWindow:AuthPopupWindow;
+			
+			public function signIntoMySpace ():void
+			{
+				// Clear previous errors, if any
+				//
+				this.ErrorPanel.visible = false;
+				
+				// Get the request token
+				//
+				ms = new MySpace(this.CONSUMER_KEY, this.CONSUMER_SECRET);
+				ms.getRequestToken(onGetRequestTokenRequestComplete, oauthCallbackURL);
+			}
+
+			public function onGetRequestTokenRequestComplete(response:String):void
+			{
+				// Got the request token. Parse it into an OAuthToken object
+				//				
+				this.oAuthRequestToken = new OAuthToken("","",response);
+				
+				// Get the authorization URL string
+				//
+				var authURL:String = ms.getAuthorizationURL(oAuthRequestToken);
+
+				// Show the auth popup window
+				//
+				authPopupWindow = new AuthPopupWindow(authURL, 700, 500);
+				authPopupWindow.addEventListener("oauthcallbackevent", onAuthCallback);
+				authPopupWindow.show();
+			}
+			
+			public function onAuthCallback (evt:OAuthCallbackEvent):void
+			{
+				// Close the auth popup window now that we've gotten the oauth callback
+				//
+				authPopupWindow.close();
+
+				// Check to see if there was an error during the oauth flow
+				//
+				if (evt.isError)
+				{
+					this.ErrorPanel.text += evt.error_message;
+					this.ErrorPanel.visible = true;
+					return;
+				}
+				
+				// If we're here, then the user has successfully authorized our app
+				// to access their data 
+				// Exchange the request token for an access token
+				//
+				ms.getAccessToken(this.oAuthRequestToken, onGetAccessTokenRequestComplete, evt.oauth_verifier); 				
+			}
+			
+			public function onGetAccessTokenRequestComplete(response:String):void
+			{
+				this.oAuthAccessToken = new OAuthToken("","",response);
+				
+				// Use the access token to create an authorized "session" object that can be used to invoke REST APIs
+				//
+				this.msAuthorized = new MySpace(this.CONSUMER_KEY, this.CONSUMER_SECRET, true, this.oAuthAccessToken.key, this.oAuthAccessToken.secret);	
+			
+				msAuthorized.getUserId(onGetUserIdComplete);
+			}
+		
+			public function onGetUserIdComplete(userId:String):void
+			{			
+				this.userid = userId;
+				
+				this.UserID.text += userId;
+				this.UserID.visible = true;
+						
+				// Now that we have the user id, fetch the user's profile info.
+				// NOTE: You should be able to call pretty much any of the supported
+				//       api's (such as album, status, mood etc) at this stage
+			
+				this.getUserProfile();
+			}
+			
+			public function getUserProfile():void {			
+				msAuthorized.getProfile(this.userid, onGetProfileRequestComplete);
+			}
+				
+		public function onGetProfileRequestComplete (xml:XML):void
+		{
+			this.Name.text += xml._xml_ns::displayname;
+			this.Gender.text += xml._xml_ns::profile._xml_ns::gender;
+			
+			this.Name.visible = true;
+			this.Gender.visible = true;
+		}
+
+
+		]]>		
+	</mx:Script>
+	
+	<mx:Button x="162" y="10" label="Sign into MySpace" id="signinButton" width="174" click="signIntoMySpace()"/>
+	
+	<mx:Label id="ErrorPanel" x="10" y="62" fontSize="12" fontWeight="bold" text="Error: " visible="false"  width="478" color="#FF0000"/>
+
+	<mx:Label id="UserID" x="10" y="90" fontSize="12" text="User ID: " width="478" visible="false" color="#0000FF"/>
+	<mx:Label id="Name" x="10" y="119" fontSize="12" text="Name:   " width="478" visible="false" color="#0000FF"/>
+	<mx:Label id="Gender" x="10" y="148" fontSize="12" text="Gender:" width="478" visible="false" color="#0000FF"/>
+	
+</mx:WindowedApplication>

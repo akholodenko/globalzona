@@ -1,0 +1,55 @@
+<!-- {} DENOTES SERVER SIDE MODIFICATIONS -->
+<html>
+<head>
+	<title>Sample</title>
+</head>
+<body>
+
+	<!-- SAMPLE HTML PLAYER EMBEDS -->
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 50%; margin: 5px">
+				<div id="vid_container_1" style="height: 300px"></div>
+			</td>
+			<td style="width: 50%; margin: 5px">
+				<div id="vid_container_2" style="height: 300px"></div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 50%; margin: 5px">
+				<div id="vid_container_3" style="height: 300px"></div>
+			</td>
+			<td style="width: 50%; margin: 5px">
+				<div id="vid_container_4" style="height: 300px"></div>
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+	<!-- SCRIPTS -->
+	
+	<script language="javascript" src="../libs/jquery.js"></script> <!-- {JQUERY MUST BE INCLUDED BUT JQUERY UI IS NO LONGER NEEDED} -->
+	<script language="javascript" src="../com/myspace/embed/htmlVideoPlayerEmbed.js"></script> <!-- {NEW JAVASCRIPT FILE THAT MUST BE INCLUDED!} -->
+
+	<!-- {INCLUDE THIS JAVASCRIPT BLOCK WITH MODIFICATIONS BELOW} -->
+	<script language="javascript">
+	
+$(window).load(
+	function() {
+		// {ADD EACH VIDEO TO BE RENDERED ON THE PAGE AS A PARAM} 
+		HTMLVideoPlayerEmbed.embed(
+			// {USE HTMLVIDEOPLAYEREMBEDDATA OBJCT FOR EACH VIDEO - 1ST PARAM IS VIDEO CONTAINER ID AND 2ND PARAM IS IFRAME SRC URL
+			new HTMLVideoPlayerEmbedData("vid_container_1", "./video.html?mediaid=1&uid=1&etc=etc"),
+			new HTMLVideoPlayerEmbedData("vid_container_2", "./video.html?mediaid=2&uid=2&etc=etc"),
+			new HTMLVideoPlayerEmbedData("vid_container_3", "./video.html?mediaid=3&uid=3&etc=etc"),
+			new HTMLVideoPlayerEmbedData("vid_container_4", "./video.html?mediaid=4&uid=4&etc=etc")
+		);
+	}
+);
+
+	</script>
+	
+</body>
+</html>

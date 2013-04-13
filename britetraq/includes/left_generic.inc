@@ -1,0 +1,1 @@
+<img src="images/layout2_vert.jpg" width="62" height="441">

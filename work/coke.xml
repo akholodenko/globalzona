@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+	<layoutType>boxLayout</layoutType>
+	<url>coke.swf</url>
+	<data> 
+	
+<box style="width: 100%; height: 100%; background-color: rgb(247, 0, 8); overflow: hidden; border: 10px white; min-width: 900px">
+	<hbox style="width: 100%; height: 100%">
+
+<box style="width: 40%; height: 100%; overflow: hidden">
+	<img src="_straws" style="vertical-align: bottom; horizontal-align: right; left: -15%" />
+	<img src="_wave" style="width: 100%; height: 25%; vertical-align: middle; opacity: .3; min-width: 500px" />
+</box>
+	
+<vbox style="width: 60%; height: 100%; padding: 5px; padding-left: 0px">
+	<box style="width: 100%; height: 100%">
+		<media style="width: 100%; height: 100%; background-color: black" />
+		
+		<img src="_bottomRight" style="vertical-align: bottom; horizontal-align: right; color: rgb(247, 0, 8); left: 1px" />
+		<img src="_bottomLeft" style="vertical-align: bottom; horizontal-align: left; color: rgb(247, 0, 8); left: -1px" />
+		<img src="_topRight" style="vertical-align: top; horizontal-align: right; color: rgb(247, 0, 8); left: 1px" />
+		<img src="_topLeft" style="vertical-align: top; horizontal-align: left; color: rgb(247, 0, 8); left: -1px" />
+	</box>
+	<hbox style="width: 100%; padding: 2px">
+		<play>
+			<img src="_button" style="color: #ff0000" />
+			<on style="width: 100%; height: 100%">
+				<mouseup style="horizontal-align: center; vertical-align: middle"><img src="_pause" /></mouseup>
+				<mouseover style="horizontal-align: center; vertical-align: middle; color: red"><img src="_pause" /></mouseover>
+				<mousedown style="horizontal-align: center; vertical-align: middle; color: red"><img src="_pause" /></mousedown>
+			</on>
+			<off style="width: 100%; height: 100%">
+				<mouseup style="horizontal-align: center; vertical-align: middle"><img src="_start" /></mouseup>
+				<mouseover style="horizontal-align: center; vertical-align: middle; color: red"><img src="_start" /></mouseover>
+				<mousedown style="horizontal-align: center; vertical-align: middle; color: red"><img src="_start" /></mousedown>
+			</off>
+		</play>
+		
+		<mediascrubber style="width: 100%; min-width: 30px; height: 13px; vertical-align: middle; margin-left: 12px">
+			<box style="width: 100%; height: 5px; background-color: #eeeeee; vertical-align: middle" />
+			<maximum style="width: 100%; height: 5px; background-color: #cccccc; vertical-align: middle" />
+			<current style="width: 100%; height: 5px; background-color: #777777; vertical-align: middle" />
+			<handle><img src="_button" style="width: 5px; height: 13px; color: #ff0000" /></handle>
+		</mediascrubber>
+		<html style="font-family: sans-serif; color: #cccccc; font-size: 10px; vertical-align: middle; margin-right: 12px; margin-left: 5px">
+			#{TIME}
+		</html>
+		
+		<mute style="color: #ff0000; height: 20px">
+			<on style="width: 100%; height: 100%">
+				<img src="_speaker" style="margin-left: 8px; vertical-align: middle" />
+			</on>
+			<off style="width: 100%; height: 100%">
+				<hbox style="height: 100%; margin-right: 4px">
+					<img src="_speaker" style="margin-left: 8px; margin-right: 2px; vertical-align: middle" />
+					<img src="_sound" style="vertical-align: middle" />
+				</hbox>
+			</off>
+		</mute>
+		<volumescrubber style="width: 50px; height: 9px; vertical-align: middle">
+			<box style="width: 100%; height: 9px; background-color: #eeeeee" />
+			<current style="width: 100%; height: 9px; background-color: #777777" />
+			<handle><img src="_button" style="width: 9px; height: 9px; color: #ff0000" /></handle>
+		</volumescrubber>
+		<menu style="width: 40px; margin-left: 12px">
+			<img src="_button" style="color: #ff0000; width: 100%" />
+			<mouseup style="horizontal-align: center; vertical-align: middle"><img src="_menu" /></mouseup>
+			<mouseover style="horizontal-align: center; vertical-align: middle; color: red"><img src="_menu" /></mouseover>
+			<mousedown style="horizontal-align: center; vertical-align: middle; color: red"><img src="_menu" /></mousedown>
+		</menu>
+		<fullscreen style="margin-left: 2px">
+			<img src="_button" style="color: #ff0000" />
+			<mouseup style="horizontal-align: center; vertical-align: middle"><img src="_fullscreen" /></mouseup>
+			<mouseover style="horizontal-align: center; vertical-align: middle; color: red"><img src="_fullscreen" /></mouseover>
+			<mousedown style="horizontal-align: center; vertical-align: middle; color: red"><img src="_fullscreen" /></mousedown>
+		</fullscreen>
+	</hbox>
+</vbox>	
+
+	</hbox>
+	
+	<img src="_bottomRight" style="vertical-align: bottom; horizontal-align: right" />
+	<img src="_bottomLeft" style="vertical-align: bottom; horizontal-align: left" />
+	<img src="_topRight" style="vertical-align: top; horizontal-align: right" />
+	<img src="_topLeft" style="vertical-align: top; horizontal-align: left" />
+</box>
+
+	</data>
+</layout> 

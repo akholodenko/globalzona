@@ -1,0 +1,345 @@
+.copyright {
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: normal;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+a {
+	color: #dddddd;
+	font-weight: normal;	
+}
+.spacer {
+	font-family: Tahoma;
+	font-size: 5px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+}
+
+.spacer2 {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+}
+
+.nav {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+.navTall {
+	font-family: Tahoma;
+	font-size: 13px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+.navTall2 {
+	font-family: Tahoma;
+	font-size: 13px;
+	font-style: normal;
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+.navHeader {
+	font-family: Tahoma;
+	font-size: 15px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.text {
+
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+.textBoldWhite {
+
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.textBoldWhite a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.textBig {
+
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+.textBigNormal {
+
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+.textSmall {
+	font-family: Tahoma;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+
+.textSmallWhiteBold {
+	font-family: Tahoma;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #ffffff;
+}
+
+.textSmallWhiteBold a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.textBlack {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.textSmallWhite {
+	font-family: Tahoma;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 15px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header {
+
+
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+.form {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #555555;
+	border: 1px solid #cccccc;
+}
+
+.formLarge {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #555555;
+	border: 1px solid #cccccc;
+}
+
+.formWidth {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #555555;
+	border: 1px solid #cccccc;
+
+	width: 170px;
+}
+.formRO {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #666666;
+	border: 1px solid #cccccc;
+	text-align: center;
+}
+
+.imgBorder {
+border-width: 1px;
+border-color: gray;
+border-style: solid;
+}
+
+.imgBorderBlack {
+border-width: 1px;
+border-color: black;
+border-style: solid;
+}
+
+.textLink {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.textLinkBig {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.textSubLink {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: normal;
+	color: #DDDDDD;
+	text-decoration: none;
+}
+
+.videoInfo {
+	background-color: #dddddd;
+	text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+	width: 100%;
+}
+
+.blankLink {
+	text-decoration: none;
+}
+
+.featuredBG {
+	background-image: url(layout/navBG.jpg);
+	background-repeat: no-repeat;
+}
+
+.featuredBGBottom {
+	background-image: url(layout/featuredGradient2.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.lightGradient {
+	background-image: url(layout/gradientLight.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	color: black;
+}
+
+.lightGradientDim {
+	background-image: url(layout/gradientLight.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	color: #777777;
+}
+
+.bgMouseOverDetails {
+	background-image: url(layout/bgMouseOverDetails.jpg);
+	background-repeat: no-repeat;
+}
+
+.bgRecentEventsMouseOut {
+	background-image: url(layout/recentEventOff.jpg);
+	background-repeat: no-repeat;
+}
+
+.hidden_div {
+	overflow:hidden;
+	height:0px;
+}
+
+.underLineOn {
+	text-decoration: underline;
+}
+
+.underLineOff {
+	text-decoration: none;
+}
+
+.scrollDiv {
+
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+
+	overflow:auto; 
+	height:423px; 
+	width: 405px; 
+	scrollbar-face-color: #cccccc; 
+	scrollbar-highlight-color: #222222; 
+	scrollbar-3dlight-color: #222222;         
+	scrollbar-darkshadow-color: #222222;         
+	scrollbar-shadow-color: #222222;         
+	scrollbar-arrow-color: #222222;         
+	scrollbar-track-color: #222222;
+}

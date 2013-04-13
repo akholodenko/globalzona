@@ -1,0 +1,209 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MySpaceTV Video Player v0.1</title>
+<script type="text/javascript" src="swfobject.js"></script>
+</head>
+<body>
+	<div id="flashcontent">This content requires the latest Flash player. <a href="http://www.macromedia.com/go/getflashplayer/">Get Flash here.</a></div>
+	<script type="text/javascript">
+		var fo = new SWFObject("Main.swf", "shell", "489", "412", "9.0.28", "#000000");			
+		fo.addVariable("m","30957176");
+		fo.addParam("allowFullScreen","true");	
+		fo.addParam("allowScriptAccess", "always");	
+		fo.write("flashcontent");			
+    </script>	
+	<script type="text/javascript" language="JavaScript">
+	function syncRoadBlock(adTag)
+	{
+		a = adTag.split(';');
+		if (a.length>0)
+		{
+            for (x=0; x<=a.length-1; x++)
+			{
+				if (a[x].indexOf('sz=') == 0)
+				{
+					size = a[x].substring(3);
+                  	dims = size.split('x');
+                  	width = dims[0];
+               		height = dims[1];
+
+					if(height == 90)
+					{
+						loadRBs('tkn_leaderboard',width,height,adTag);
+					}
+					if(height == 250)
+					{
+						loadRBs('tkn_medrec',width,height,adTag);
+					}
+           		}
+           	}
+		}
+	}
+
+	function loadRBs(s,w,h,adTag)
+	{
+   		document.getElementById(s).innerHTML = '<iframe src="' + adTag + '" id="ifr_companion" width="'+w+'" height="'+h+'" marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no>' + '</iframe>';
+	}
+	
+	</script>
+
+	<script type="text/javascript" language = "JavaScript">
+	var f_cb_medrect1_served = false;
+	var f_cb_leaderboard1_served = false;
+	var f_need_cb = false;
+	
+	function makeCall() 
+	{
+		document.getElementById("flvPlayerDiv").innerHTML = "";
+		playContent();
+	}
+	
+	function yume_backfill_banner(banner_div_id, banner_frame_id, imu_type) 
+	{
+		var rc=0;
+		var cb_width = document.getElementById(banner_div_id).style.width;
+		var cb_height =document.getElementById(banner_div_id).style.height;
+		var y_c_frame = document.getElementById(banner_frame_id);
+		var cb_w = cb_width.split("px", 1);
+		var cb_h = cb_height.split("px", 1);
+		var arg1 ="http://shadow01.yumenetworks.com/dynamic_banner_iframe.html?domain=55TlEbCHFw&width="+cb_w+"&height="+cb_h+"&imu="+imu_type;
+		try 
+		{
+			y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = "<iframe src='"+arg1+"'height='"+cb_height+"'width='"+cb_width+"' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' topmargin='0' leftmargin='0' style='overflow:hidden'></iframe>";
+			rc = 1;
+		} catch(e) {}
+		return rc;
+	}
+	
+	function yume_serve_cb_frame(banner_div_id, banner_frame_id, frame_src_url) 
+	{
+		var rc=0;
+		var cb_width = document.getElementById(banner_div_id).style.width;
+		var cb_height =document.getElementById(banner_div_id).style.height;
+		var y_c_frame = document.getElementById(banner_frame_id);
+		try 
+		{
+			y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = "<iframe src='"+frame_src_url+"'height='"+cb_height+"'width='"+cb_width+"' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' topmargin='0' leftmargin='0' style='overflow:hidden'></iframe>";
+			rc = 1;
+		} catch(e) {}
+		return rc;
+	}
+	
+	function yume_serve_cb_image(banner_div_id, banner_frame_id, frame_img, frame_link) 
+	{
+		var rc=0;
+		var cb_width = document.getElementById(banner_div_id).style.width;
+		var cb_height =document.getElementById(banner_div_id).style.height;
+		var y_c_frame = document.getElementById(banner_frame_id);
+		try 
+		{
+			y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = "<a href='"+frame_link+"' target='_blank'><img src='"+frame_img+"' border='0' width='"+cb_width+"' height='"+cb_height+"'></a>";
+			rc = 1;
+		} catch(e) {}
+		return rc;
+	}
+	
+	function yume_flash_callback(command, arg1, arg2, arg3)
+	{
+		if (command == 'companionbanner/iframe') 
+		{
+			if (arg3=="cb1" || arg3=="cb_medrect1") 
+			{
+				if (yume_serve_cb_frame("cb_medrect1_div", "cb_medrect1_frame", arg1) > 0) 
+				{
+					f_cb_medrect1_served = true;
+				}
+			} 
+			else if (arg3=="cb_leaderboard1") 
+			{
+				if (yume_serve_cb_frame("cb_leaderboard1_div", "cb_leaderboard1_frame", arg1) > 0) 
+				{
+					f_cb_leaderboard1_served = true;
+				}
+			}
+		} 
+		else if (command == 'companionbanner/image') 
+		{ 
+			if (arg3=="cb1" || arg3=="cb_medrect1") 
+			{
+				if (yume_serve_cb_image("cb_medrect1_div", "cb_medrect1_frame", arg1, arg2) > 0) 
+				{
+					f_cb_medrect1_served = true;
+				}
+			} 
+			else if (arg3=="cb_leaderboard1") 
+			{
+				if (yume_serve_cb_image("cb_leaderboard1_div", "cb_leaderboard1_frame", arg1, arg2) > 0) 
+				{
+					f_cb_leaderboard1_served = true;
+				}
+			} 
+			else if(command == "yume_preroll_start" || command == "yume_postroll_start" || command == "yume_midroll_start") 
+			{
+				f_need_cb = true;
+			} 
+			else if(command == "yume_preroll_end" || command == "yume_postroll_end" || command == "yume_midroll_end") 
+			{
+				f_need_cb = false;
+			} 
+			else if(command == "yume_ad_end") 
+			{
+				f_cb_medrect1_served = false;
+				f_cb_leaderboard1_served = false;
+			} 
+			else if( (command == "yume_ad_start" && f_need_cb == true)
+				||(command == "yume_end" && arg1 == "0" && f_need_cb == true) ) 
+			{
+				if (f_cb_medrect1_served == false) 
+				{
+					if (yume_backfill_banner("cb_medrect1_div", "cb_medrect1_frame", "medrect") > 0) 
+					{
+						f_cb_medrect1_served = true;
+					}
+				}
+			}
+			if (f_cb_leaderboard1_served == false) 
+			{
+				if (yume_backfill_banner("cb_leaderboard1_div", "cb_leaderboard1_frame", "leaderboard") > 0) 
+				{
+					f_cb_leaderboard1_served = true;
+				}
+			}
+		}
+	}
+	</script>
+	
+	<script>
+		function $() {
+			var elements = new Array();
+			for (var i = 0; i < arguments.length; i++) {
+				var element = arguments[i];
+				if (typeof element == 'string')
+					element = document.getElementById(element);
+				if (arguments.length == 1)
+					return element;
+				elements.push(element);
+			}
+			return elements;
+		}
+	</script>
+	<div>
+		<input type="submit" value="play" onclick="$('shell').play()" />
+		<input type="submit" value="pause" onclick="$('shell').pause()" />
+	</div>
+
+	<div  id="cb_leaderboard1_div" style="width: 728px; height: 90px; overflow:hidden">
+		<iframe name="cb_leaderboard1_frame" id="cb_leaderboard1_frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="728" height="90">    </iframe>
+	</div>
+
+	<div  id="cb_medrect1_div" style="width: 300px; height: 250px; float:right; overflow:hidden">
+		<iframe name="cb_medrect1_frame" id="cb_medrect1_frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="300" height="250">    </iframe>
+	</div>
+
+	<div id="tkn_leaderboard" style="width: 728px; height: 90px; position:absolute; float:right; left: 725px; top: 100px;"></div>
+	<div id="tkn_medrec" style="width: 728px; height: 90px; position:absolute; float:right; left: 725px; top: 25px;"></div>
+
+
+</body>
+</html>

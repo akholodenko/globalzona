@@ -1,0 +1,32 @@
+<?
+	$venue = Data::GetVenueById($_GET['venue_id']);
+	echo "<table width='100%' border='0' cellpadding='2' cellspacing='2'>";
+	echo "	<form action='process/process_venue_edit.php' method='POST'>";
+	echo "	<input type='hidden' name='venue_id' value='".$venue['id']."'>";
+	echo "	<tr class='text_body' style='font-weight: bold'>";
+	echo "		<td colspan='2'>Edit Venue</td>";
+	echo "	</tr>";
+	echo "	<tr>";
+	echo "		<td colspan='2'><hr style='color:#33ff99;' noshade size='1'></td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td width='60'>Name:</td>";
+	echo "		<td>";
+					Form::Input('venue_name', 'venue_name', 'form', 'width: 400px;', stripslashes(urldecode($venue['name'])));
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td>Address:</td>";
+	echo "		<td>";
+					Form::Input('venue_address', 'venue_address', 'form', 'width: 400px;',  stripslashes(urldecode($venue['address'])));
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	<tr class='text_body'>";
+	echo "		<td>&nbsp;</td>";
+	echo "		<td>";
+					Form::ButtonSubmit('submitButton', 'submitButton', '', '', 'submit', '');
+	echo "		</td>";
+	echo "	</tr>";
+	echo "	</form>";
+	echo "</table>";
+?>

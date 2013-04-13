@@ -1,0 +1,138 @@
+body
+{
+	background-color: black;
+	margin: 0px;
+	padding: 0px;
+}
+
+#container
+{
+	width: 100%;
+	height: 100%;
+	background: url('../images/bg3.png') no-repeat;
+}
+
+#logo_container
+{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.subtitle
+{
+	font-family: Helvetica, Arial, sans-serif;
+	color: #eaca38;
+	font-size: large;
+	
+	width: 100%;
+	text-align: center;
+
+	margin-bottom: 10px;
+}
+
+.subtitle a
+{
+	color: #eaca38;
+	text-decoration: none; 
+	border-bottom:1px dashed;
+}
+
+#form_container
+{
+	text-align: center;
+}
+
+.form_select
+{
+	width: 85%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: large;
+	font-weight: bold;
+
+	margin-top: 8px;
+}
+
+.form_submit
+{
+	width: 50%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: large;
+	font-weight: bold;
+
+	margin: 10px;
+}
+
+#loader
+{
+	display: none;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	padding-top: 200px;
+	background-color: #333333;
+	text-align: center;
+	
+	/* for IE */
+  	filter:alpha(opacity=60);
+  	/* CSS3 standard */
+  	opacity:0.6;
+}
+
+#data_form
+{
+	margin: 0px;
+}
+
+.subtitle_log
+{
+	font-family: Helvetica, Arial, sans-serif;
+	color: #eaca38;
+	font-size: x-large;
+	font-weight: bold;
+	
+	width: 100%;
+	text-align: center;
+
+	margin-bottom: 10px;
+}
+
+#log_table
+{
+	width: 100%;	
+}
+
+#log_table tr
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: x-large;
+	font-weight: bold;
+		
+  	filter: alpha(opacity = 60);
+  	opacity: 0.6;
+}
+
+#log_table tr:nth-child(odd)
+{
+	background-color: #eaca38;
+	color: #000000;
+}
+
+#log_table tr:nth-child(even)
+{
+	color: #eaca38;
+}
+
+#log_table tr td:first-child
+{
+	width: 30px;
+	text-align: right;
+	vertical-align: top;
+}
+
+#log_table td
+{	  	
+  	padding: 10px;
+}
